@@ -1,0 +1,3118 @@
+#!/bin/bash
+PS3="ToolXMenu>"
+link="Acesse: https://github.com/"
+MU="Modo de Usar: "
+DirAtual="${PWD}"
+Install="\033[1;34m Instalação: \033[0m"
+dir1="cd "$DirAtual"/Scanners_de_Subdominio_ou_Ferramentas_de_Enumeracao/"
+dir2="cd "$DirAtual"/Scanners_de_Vulnerabilidade_de_Banco_de_Dados_ou_Ferramentas_de_Enumeracao/"
+dir3="cd "$DirAtual"/Senhas_Fracas_Scanners_de_Usuarios_ou_Ferramentas_de_Enumeracao/"
+dir4="cd "$DirAtual"/Ferramentas_de_Deteccao_IoT_ou_Scanners/"
+dir5="cd "$DirAtual"/Scanners_XSS_refletidos_ou_baseados_em_DOM/"
+dir6="cd "$DirAtual"/Gerenciamento_de_ativos_corporativos_ou_ferramentas_de_coleta_de_vazamentos/"
+dir7="cd "$DirAtual"/Deteccao_de_WebShell_ou_Ferramentas_de_Analise_de_Malware/"
+dir8="cd "$DirAtual"/Ferramentas_de_penetracao_de_intranet_ou_scanners/"
+dir9="cd "$DirAtual"/Scanners_de_Middleware_ou_Ferramentas_de_Impressao_Digital/"
+dir10="cd "$DirAtual"/Scanners_especiais__apenas_para_alguns_componentes_especiais__/"
+dir11="cd "$DirAtual"/Scanners_de_rede_sem_fio/"
+dir12="cd "$DirAtual"/Scanners_de_rede_local__rede_local_/"
+dir13="cd "$DirAtual"/Ferramentas_de_revisao_de_codigo_ou_scanners/"
+dir14="cd "$DirAtual"/Scanners_de_design_modular_ou_estrutura_de_deteccao_de_vulnerabilidades/"
+dir15="cd "$DirAtual"/Algumas_ferramentas_estao_relacionadas_com_o_APT/"
+dir16="cd "$DirAtual"/Algumas_ferramentas_de_seguranca_estao_relacionadas_com_o_ICS_e_a_rede_grande/"
+
+##toolxmenu##
+##################
+##START toolxmenu##
+toolxmenu()
+{
+toolxmenu=("Scanners de Subdomínio ou Ferramentas de Enumeração (SSFE)" 
+  "Scanners de Vulnerabilidade de Banco de Dados ou Ferramentas de Enumeração (SVBDFE)" 
+  "Senhas Fracas Scanners de Usuarios ou Ferramentas de Enumeração (SFCUFE)" 
+  "Ferramentas de Detecção IoT ou Scanners (FDIS)" 
+          "Scanners XSS refletidos ou baseados em DOM (SXRBD)" 
+          "Gerenciamento de ativos corporativos ou ferramentas de coleta de vazamentos (GACFCV)" 
+          "Detecção de WebShell ou Ferramentas de Analise de Malware (DWFAM)" 
+          "Ferramentas de penetração de intranet ou scanners (FPIS)" 
+          "Scanners de Middleware ou Ferramentas de Impressão Digital (SMFID)" 
+          "Scanners especiais (apenas para alguns componentes especiais) (SE)" 
+          "Scanners de rede (sem fio) (SRSF)" 
+          "Scanners de rede (rede local) (SRRL)"
+          "Ferramentas de revisão de código ou scanners (FRCS)" 
+          "Scanners de design modular ou estrutura de detecção de vulnerabilidades (SDMEDV)" 
+          "Algumas ferramentas estão relacionadas com o APT (AFERCA)" 
+          "Algumas ferramentas de segurana estão relacionadas com o ICS e a rede grande (AFSERCIRG)" "Cair fora")
+select opt in "${toolxmenu[@]}"; do
+  if [ "$opt" = "Cair fora" ]; then
+  echo "Saindo... Obrigado por utilizar o Script ToolX!" && sleep 1 && clear
+  exit 0
+  elif [ "$opt" = "Scanners de Subdomínio ou Ferramentas de Enumeração (SSFE)" ]; then
+SSFE
+  elif [ "$opt" = "Scanners de Vulnerabilidade de Banco de Dados ou Ferramentas de Enumeração (SVBDFE)" ]; then
+SVBDFE
+    elif [ "$opt" = "Senhas Fracas Scanners de Usuarios ou Ferramentas de Enumeração (SFCUFE)" ]; then
+SFCUFE
+    elif [ "$opt" = "Ferramentas de Detecção IoT ou Scanners (FDIS)" ]; then
+FDIS
+  elif [ "$opt" = "Scanners XSS refletidos ou baseados em DOM (SXRBD)" ]; then
+SXRBD
+  elif [ "$opt" = "Gerenciamento de ativos corporativos ou ferramentas de coleta de vazamentos (GACFCV)" ]; then
+GACFCV
+    elif [ "$opt" = "Detecção de WebShell ou Ferramentas de Analise de Malware (DWFAM)" ]; then
+DWFAM
+    elif [ "$opt" = "Ferramentas de penetração de intranet ou scanners (FPIS)" ]; then
+FPIS
+  elif [ "$opt" = "Scanners de Middleware ou Ferramentas de Impressão Digital (SMFID)" ]; then
+SMFID
+  elif [ "$opt" = "Scanners especiais (apenas para alguns componentes especiais) (SE)" ]; then
+SE
+    elif [ "$opt" = "Scanners de rede (sem fio) (SRSF)" ]; then
+SRSF
+    elif [ "$opt" = "Scanners de rede (rede local) (SRRL)" ]; then
+SRRL
+  elif [ "$opt" = "Ferramentas de revisão de código ou scanners (FRCS)" ]; then
+FRCS
+  elif [ "$opt" = "Scanners de design modular ou estrutura de detecção de vulnerabilidades (SDMEDV)" ]; then
+SDMEDV
+    elif [ "$opt" = "Algumas ferramentas estão relacionadas com o APT (AFERCA)" ]; then
+AFERCA
+    elif [ "$opt" = "Algumas ferramentas de segurana estão relacionadas com o ICS e a rede grande (AFSERCIRG)" ]; then
+AFSERCIRG
+  else
+  echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+done
+}
+##END toolxmenu##
+################
+##/toolxmenu##
+
+##SSFE##
+###################
+##START SSFE##
+SSFE()
+{
+    SSFE=("Descoberta de subdomínio por meio de alterações e permutações (altdns)" 
+      "Enumeração de subdomínio e ferramenta de coleta de informações (anubis)" 
+      "Find brother domain (brodomain)" 
+      "Abusa de registros de transparência de certificados para obter subdomínios de sites HTTPS (ctfr)" 
+      "ferramenta de enumeração de subdomínio com registro de mapa (dnsmaper)" 
+      "Ferramentas de enumeração de subdomínio para busca de bugs (domained)" 
+      "Ferramenta de subdomínios de enumeração, baseada no AsyncIO e no ditado não repetitivo (esd)" 
+      "Uma aranha criada para encontrar subdomínios de um domínio específico rastreando-a (inventus)" 
+      "Listando subdomínios sobre um domínio principal (n4xd0rk)" 
+      "Uma aranha de meta-consulta de DNS que enumera registros DNS e subdomínios, API suportada (subbrute)" 
+      "Uma ferramenta clássica de enumeração de subdomínio por lijiejie (subdomainsbrute)" 
+      "Ferramenta de enumeração rápida de subdomínios para testadores de penetração (sublist3r)" 
+      "Ferramenta de enumeração de subdomínio de velocidade e precisão por ringzero (wydomain)" 
+      "Enumeração de subdomínio no Go (amass)" 
+      "Uma poderosa ferramenta de subdomínio e ferramentas de busca de domínio (aquatone)" 
+      "Enumeração de subdomínio via CloudFlare (cloudflare_enum)" 
+      "uma ferramenta bruta de domínio rápido (dnsbrute)" 
+      "uma ferramenta de enumeração de subdomíni (dnssearch)" 
+      "Dumain Bruteforcer - um bruteforcer de domínio rápido e flexível (dumb)" 
+      "enumeração de subdomínio por meio da transparência do certificado do Google (gsdf)" 
+      "Analisar subdomínio do Knock (knock)" 
+      "Ferramenta de enumeração de subdomínio on-line (orangescan)" 
+      "Uma ferramenta simples e rápida para subdomínios bruting (subdomain3)" 
+      "SubFinder é uma ferramenta de descoberta de subdomínio que tem uma arquitetura modular simples e foi apontada como sucessora do projeto sublist3r (subfinder)" 
+      "Um nome de domínio e ferramenta de coleta de endereços de e-mail (teemo)" "Voltar")
+  select ssfeopt in "${SSFE[@]}"; do
+  if [ "$ssfeopt" = "Descoberta de subdomínio por meio de alterações e permutações (altdns)" ]; then
+    altdns
+    elif [ "$ssfeopt" = "Enumeração de subdomínio e ferramenta de coleta de informações (anubis)" ]; then
+        anubis
+  elif [ "$ssfeopt" = "Find brother domain (brodomain)" ]; then
+        brodomain
+  elif [ "$ssfeopt" = "Abusa de registros de transparência de certificados para obter subdomínios de sites HTTPS (ctfr)" ]; then
+        ctfr
+  elif [ "$ssfeopt" = "ferramenta de enumeração de subdomínio com registro de mapa (dnsmaper)" ]; then
+        dnsmaper
+  elif [ "$ssfeopt" = "Ferramentas de enumeração de subdomínio para busca de bugs (domained)" ]; then
+        domained
+  elif [ "$ssfeopt" = "Ferramenta de subdomínios de enumeração, baseada no AsyncIO e no ditado não repetitivo (esd)" ]; then
+        esd
+  elif [ "$ssfeopt" = "Uma aranha criada para encontrar subdomínios de um domínio específico rastreando-a (inventus)" ]; then
+        inventus
+  elif [ "$ssfeopt" = "Listando subdomínios sobre um domínio principal (n4xd0rk)" ]; then
+        n4xd0rk
+  elif [ "$ssfeopt" = "Uma aranha de meta-consulta de DNS que enumera registros DNS e subdomínios, API suportada (subbrute)" ]; then
+        subbrute
+  elif [ "$ssfeopt" = "Uma ferramenta clássica de enumeração de subdomínio por lijiejie (subdomainsbrute)" ]; then
+        subdomainsbrute
+  elif [ "$ssfeopt" = "Ferramenta de enumeração rápida de subdomínios para testadores de penetração (sublist3r)" ]; then
+        sublist3r
+  elif [ "$ssfeopt" = "Ferramenta de enumeração de subdomínio de velocidade e precisão por ringzero (wydomain)" ]; then
+        wydomain
+  elif [ "$ssfeopt" = "Enumeração de subdomínio no Go (amass)" ]; then
+        amass
+  elif [ "$ssfeopt" = "Uma poderosa ferramenta de subdomínio e ferramentas de busca de domínio (aquatone)" ]; then
+        aquatone
+  elif [ "$ssfeopt" = "Enumeração de subdomínio via CloudFlare (cloudflare_enum)" ]; then
+        cloudflare_enum
+  elif [ "$ssfeopt" = "uma ferramenta bruta de domínio rápido (dnsbrute)" ]; then
+        dnsbrute
+  elif [ "$ssfeopt" = "uma ferramenta de enumeração de subdomíni (dnssearch)" ]; then
+        dnssearch
+  elif [ "$ssfeopt" = "Dumain Bruteforcer - um bruteforcer de domínio rápido e flexível (dumb)" ]; then
+        dumb
+  elif [ "$ssfeopt" = "enumeração de subdomínio por meio da transparência do certificado do Google (gsdf)" ]; then
+        gsdf
+  elif [ "$ssfeopt" = "Analisar subdomínio do Knock (knock)" ]; then
+        knock
+  elif [ "$ssfeopt" = "Ferramenta de enumeração de subdomínio on-line (orangescan)" ]; then
+        orangescan
+  elif [ "$ssfeopt" = "Uma ferramenta simples e rápida para subdomínios bruting (subdomain3)" ]; then
+        subdomain3
+  elif [ "$ssfeopt" = "SubFinder é uma ferramenta de descoberta de subdomínio que tem uma arquitetura modular simples e foi apontada como sucessora do projeto sublist3r (subfinder)" ]; then
+        subfinder
+  elif [ "$ssfeopt" = "Um nome de domínio e ferramenta de coleta de endereços de e-mail (teemo)" ]; then
+        teemo
+  elif [ "$ssfeopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END ssfe##
+#################
+
+altdns()
+{
+echo -e $Install"altdns"
+echo $dir1"altdns"
+echo "pip install -r requirements.txt"
+echo $MU"./altdns.py -i subdomains.txt -o data_output -w words.txt -r -s results_output.txt"
+echo $link"infosec-au/altdns/"
+}
+anubis()
+{
+echo -e $Install"anubis"
+echo $dir1"anubis"
+echo "apt install nmap"
+echo "sudo apt-get install python3-pip python-dev libssl-dev libffi-dev"
+echo "pip3 install anubis-netsec"
+echo $MU"
+  anubis -t TARGET [-o FILENAME] [-noispbarv] [-w SCAN] [-q NUM]
+  anubis -h
+  anubis --version"
+echo $link"jonluca/Anubis/"
+}
+brodomain()
+{
+echo -e $Install"brodomain"
+echo $dir1"brodomain"
+echo $MU"python brodomain.py baidu.com"
+echo $link"code-scan/BroDomain"
+}
+ctfr()
+{
+echo -e $Install"ctfr"
+echo $dir1"ctfr"
+echo "sudo apt-get install python3-pip"
+echo "pip3 install -r requirements.txt"
+echo $MU"python3 ctfr.py -d facebook.com -o /home/shei/subdomains_fb.txt"
+echo $link"UnaPibaGeek/ctfr"
+}
+dnsmaper()
+{
+echo -e $Install"dnsmaper"
+echo $dir1"dnsmaper"
+echo $MU"python dnsmaper.py whitehouse.gov"
+echo $link"le4f/dnsmaper"
+}
+domained()
+{
+echo -e $Install"domained"
+echo $dir1"domained"
+echo "sudo pip install -r ./ext/requirements.txt"
+echo "python domained.py --install"
+echo "sudo apt-get install libldns-dev -y"
+echo "sudo apt-get install golang"
+echo $MU"python domained.py -d example.com -b -p --vpn"
+echo $link"cak/domained"
+}
+esd()
+{
+echo -e $Install"esd"
+echo $dir1"esd"
+echo "pip instalar esd"
+echo "pip install esd --upgrade"
+echo $MU"esd qq.com"
+echo $link"FeeiCN/ESD"
+}
+inventus()
+{
+echo -e $Install"inventus"
+echo $dir1"inventus"
+echo "pip install -r requirements.txt"
+echo $MU"scrapy crawl inventus -a domain=facebook.com -a subdomain_limit=100"
+echo $link"nmalcolm/Inventus"
+}
+n4xd0rk()
+{
+echo -e $Install"n4xd0rk"
+echo $dir1"n4xd0rk"
+echo "instalação pip -r requirements.txt"
+echo $MU"python n4xd0rk.py -t apple.com -n 1"
+echo $link"n4xh4ck5/N4xD0rk"
+}
+subbrute()
+{
+echo -e $Install"subbrute"
+echo $dir1"/subbrute"
+echo "Ubuntu/Debian: sudo apt-get instala o python-dnspython"
+echo $MU"./subbrute.py google.com gmail.com blogger.com"
+echo $link"TheRook/subbrute"
+}
+subdomainsbrute()
+{
+echo -e $Install"subdomainsbrute"
+echo $dir1"subdomainsbrute"
+echo "pip instale dnspython gevent"
+echo $link"lijiejie/subDomainsBrute"
+}
+sublist3r()
+{
+echo -e $Install"sublist3r"
+echo $dir1"sublist3r"
+echo "Ubuntu/Debian: sudo apt-get install python-requests python-dnspython python-argparse"
+echo "sudo pip install -r requirements.txt"
+echo $MU"python sublist3r.py -e google,yahoo,virustotal -d example.com"
+echo $link"aboul3la/Sublist3r"
+}
+wydomain()
+{
+echo -e $Install"wydomain"
+echo $dir1"wydomain"
+echo "pip install -r requirements.txt"
+echo $MU"usage: dnsburte.py [-h] [-t] [-d] [-f] [-o]"
+echo $link"ring04h/wydomain"
+}
+amass()
+{
+echo -e $Install"amass"
+echo $dir1"amass"
+echo "bin/amass -src -ip -config amass_config.ini -d owasp.org"
+echo $link"caffix/amass"
+}
+aquatone()
+{
+echo -e $Install"aquatone"
+echo $dir1"aquatone"
+echo "Instalação: https://github.com/michenriksen/aquatone#installation"
+echo $MU"cat hosts.txt | aquatone -ports 80,443,3000,3001"
+echo $link"michenriksen/aquatone"
+}
+cloudflare_enum()
+{
+echo -e $Install"cloudflare_enum"
+echo $dir1"cloudflare_enum"
+echo $MU"mandatorys-box / t / cloudflare_enum > ./cloudflare_enum.py thehackerblog@yopmail.com Testing1 disney.com"
+echo $link"mandatoryprogrammer/cloudflare_enum"
+}
+dnsbrute()
+{
+echo -e $Install"dnsbrute"
+echo $dir1"dnsbrute"
+echo "./dnsbrute -domain baidu.com -server 139.162.72.5:53 -rate 50000 2>/dev/null"
+echo $link"Q2h1Cg/dnsbrute"
+}
+dnssearch()
+{
+echo -e $Install"dnssearch"
+echo $dir1"dnssearch"
+echo "./dnssearch -w txt.txt"
+echo "go build -o dnssearch main.go"
+echo $link"evilsocket/dnssearch"
+}
+dumb()
+{
+echo -e $Install"dumb"
+echo $dir1"dumb"
+echo $MU"dumb 'DUMB-DUMB-DUMB_DUMB.DUMB.DUMB' wordlists/foo_1.txt ... wordlists/foo_6.txt"
+echo $link"giovanifss/Dumb"
+}
+gsdf()
+{
+echo -e $Install"gsdf"
+echo $dir1"gsdf"
+echo $MU"python GSDFT.py -h"
+echo $link"We5ter/GSDF"
+}
+knock()
+{
+echo -e $Install"knock"
+echo $dir1"knock"
+echo "sudo apt-get instala o python-dnspython"
+echo "nano knockpy / config.json <- defina seu virustotal API_KEY"
+echo $MU"knockpy domain.com -w wordlist.txt"
+echo $link"guelfoweb/knock"
+}
+orangescan()
+{
+echo -e $Install"orangescan"
+echo $dir1"orangescan"
+echo $link"0xbug/orangescan"
+}
+subdomain3()
+{
+echo -e $Install"subdomain3"
+echo $dir1"subdomain3"
+echo "pip install -r requirement.txt"
+echo $MU"python2/3 brutedns.py -d tagetdomain -s high -l 5"
+echo $link"yanxiu0614/subdomain3"
+}
+subfinder()
+{
+echo -e $Install"subfinder"
+echo $dir1"subfinder"
+echo "go get github.com/subfinder/subfinder"
+echo "Upgrade: go get -u github.com/subfinder/subfinder"
+echo $MU"./subfinder -h"
+echo $link"subfinder/subfinder"
+}
+teemo()
+{
+echo -e $Install"teemo"
+echo $dir1"teemo"
+echo $MU"python teemo.py -d example.com"
+echo $link"bit4woo/Teemo"
+}
+
+##SVBDFE##
+###################
+##START SVBDFE##
+SVBDFE()
+{
+    SVBDFE=("Um Analisador de Vulnerabilidade do SQLi via SQLMAP e Charles (sqliscanner)" 
+      "Um scanner de vulnerabilidades do SQLi com 99 linhas de código (dsss)" 
+      "Um Analisador de Vulnerabilidade do SQLi para MySQL (feigong)" 
+      "Um scanner de vulnerabilidades SQLi para mongoDB (nosqlattack)" 
+      "Um Scanner de Vulnerabilidade Blind SQLi (bbqsql)"
+      "Um scanner de vulnerabilidades SQLi com o script Powershell (powerupsql)"
+      "Outro Verificador de Vulnerabilidade de SQL (whitewidow)"
+      "Uma poderosa ferramenta de auditoria e pentesting do MongoDB (mongoaudit)"
+      "uma estrutura Python para exploração e exploração de NoSQL (nosql-exploitation-framework)"
+      "Script simples para automatizar brutforcing vulnerabilidades de injeção SQL oculta (blindy)"
+      "Uma iniciativa e ferramentas de teste vulneráveis ​​SQL Injection passivas (fox-scan)"
+      "Um kit de ferramentas do PowerShell para atacar o SQL Server (powerupsql)"
+      "Explorar injeção cega-SQL baseada em tempo em cabeçalhos HTTP (blisqy)"
+      "Um aplicativo leve usado para localizar informações do banco de dados de um servidor distante (jsql-injection)"
+      "Scanner de vulnerabilidade de injeção de SQL maciço (sqliv)"
+      "Um amigo do SQLmap que fará o que você sempre esperava do SQLmap (sqlmate)"
+      "Força bruta do MySQL e MSSQL e ferramenta de pós-exploração (enumdb)" 
+      "Voltar")
+  select svbdfeopt in "${SVBDFE[@]}"; do
+  if [ "$svbdfeopt" = "Um Analisador de Vulnerabilidade do SQLi via SQLMAP e Charles (sqliscanner)" ]; then
+    sqliscanner
+    elif [ "$svbdfeopt" = "Um scanner de vulnerabilidades do SQLi com 99 linhas de código (dsss)" ]; then
+        dsss
+    elif [ "$svbdfeopt" = "Um Analisador de Vulnerabilidade do SQLi para MySQL (feigong)" ]; then
+        feigong
+    elif [ "$svbdfeopt" = "Um scanner de vulnerabilidades SQLi para mongoDB (nosqlattack)" ]; then
+        nosqlattack
+    elif [ "$svbdfeopt" = "Um Scanner de Vulnerabilidade Blind SQLi (bbqsql)" ]; then
+        bbqsql
+    elif [ "$svbdfeopt" = "Um scanner de vulnerabilidades SQLi com o script Powershell (powerupsql)" ]; then
+        powerupsql
+    elif [ "$svbdfeopt" = "Outro Verificador de Vulnerabilidade de SQL (whitewidow)" ]; then
+        whitewidow
+    elif [ "$svbdfeopt" = "Uma poderosa ferramenta de auditoria e pentesting do MongoDB (mongoaudit)" ]; then
+        mongoaudit
+    elif [ "$svbdfeopt" = "Uma estrutura Python para exploração e exploração de NoSQL (nosql-exploitation-framework)" ]; then
+        nosql-exploitation-framework
+    elif [ "$svbdfeopt" = "Script simples para automatizar brutforcing vulnerabilidades de injeção SQL oculta (blindy)" ]; then
+        blindy
+    elif [ "$svbdfeopt" = "Uma iniciativa e ferramentas de teste vulneráveis ​​SQL Injection passivas (fox-scan)" ]; then
+        fox-scan
+    elif [ "$svbdfeopt" = "Um kit de ferramentas do PowerShell para atacar o SQL Server (powerupsql)" ]; then
+        powerupsql
+    elif [ "$svbdfeopt" = "Explorar injeção cega-SQL baseada em tempo em cabeçalhos HTTP (blisqy)" ]; then
+        blisqy
+    elif [ "$svbdfeopt" = "Um aplicativo leve usado para localizar informações do banco de dados de um servidor distante (jsql-injection)" ]; then
+        jsql-injection
+    elif [ "$svbdfeopt" = "Scanner de vulnerabilidade de injeção de SQL maciço (sqliv)" ]; then
+        sqliv
+    elif [ "$svbdfeopt" = "Um amigo do SQLmap que fará o que você sempre esperava do SQLmap (sqlmate)" ]; then
+        sqlmate
+    elif [ "$svbdfeopt" = "Força bruta do MySQL e MSSQL e ferramenta de pós-exploração (enumdb)" ]; then
+        enumdb
+  elif [ "$svbdfeopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END ssfe##
+#################
+
+sqliscanner()
+{
+echo -e $Install"sqliscanner"
+echo $dir2"sqliscanner"
+echo "virtualenv --python=/usr/local/bin/python3.5 venv"
+echo "source venv/bin/activate"
+echo "pip install -r requirements.txt"
+echo $MU"python manage.py createsuperuser"
+echo $link"https://github.com/0xbug/SQLiScanner"
+}
+dsss()
+{
+echo -e $Install"dsss"
+echo $dir2"dsss"
+echo $MU"python dsss.py -u 'http://testphp.vulnweb.com/artists.php?artist=1'"
+echo $link"stamparm/DSSS"
+}
+feigong()
+{
+echo -e $Install"feigong"
+echo $dir2"feigong"
+echo $link"LoRexxar/Feigong"
+}
+nosqlattack()
+{
+echo -e $Install"nosqlattack"
+echo $dir2"nosqlattack"
+echo "python setup.py install"
+echo $MU"NoSQLAttack"
+echo $link"youngyangyang04/NoSQLAttack"
+}
+bbqsql()
+{
+echo -e $Install"bbqsql"
+echo $dir2"bbqsql"
+echo "sudo pip install bbqsql"
+echo $link"youngyangyang04/NoSQLAttack"
+}
+powerupsql()
+{
+echo -e $Install"powerupsql"
+echo $dir2"powerupsql"
+echo $link"NetSPI/PowerUpSQL"
+}
+whitewidow()
+{
+echo -e $Install"whitewidow"
+echo $dir2"whitewidow"
+echo "Kali, BlackArch, Parrot, etc..: sudo apt-get install liblzma-dev zlib1g-dev"
+echo "bundle install"
+echo $MU"ruby whitewidow.rb -h"
+echo $link"WhitewidowScanner/whitewidow"
+}
+mongoaudit()
+{
+echo -e $Install"mongoaudit"
+echo $dir2"mongoaudit"
+echo "pip install mongoaudit ou curl -s https://mongoaud.it/install | bash"
+echo $link"stampery/mongoaudit"
+}
+nosql-exploitation-framework()
+{
+echo -e $Install"nosql-exploitation-framework"
+echo $dir2"nosql-exploitation-framework"
+echo "Install Pip, sudo apt-get install python-setuptools; easy_install pip"
+echo "pip install -r requirements.txt"
+echo "virtualenv nosqlframework"
+echo "source nosqlframework/bin/activate"
+echo "pip install -r requirements.txt"
+echo "nosqlframework/bin/python nosqlframework.py -h"
+echo "deactivate (After usage)"
+echo "python nosqlframework.py -"
+echo $MU"nosqlframework.py -ip localhost -dict mongo -file b.txt"
+echo $link"torque59/Nosql-Exploitation-Framework"
+}
+blindy()
+{
+echo -e $Install"blindy"
+echo $dir2"blindy"
+echo $MU"python3 blindy.py http://localhost/index.php -X POST -p query_param={} -p submit=1 -r "Wrong param" -s "['blind']""
+echo $link"miss-d/blindy"
+}
+fox-scan()
+{
+echo -e $Install"fox-scan"
+echo $dir2"fox-scan"
+echo "Instalar: sqlmap, python 2.7, Flask, multiprocessing, mitmproxy, tornado, requests, BeautifulSoup 4.2.0"
+echo $MU"python sqlmapapi.py -s"
+echo $MU"python views.py" 
+echo $link"fengxuangit/Fox-scan"
+}
+blisqy()
+{
+echo -e $Install"blisqy"
+echo $dir2"blisqy"
+echo $MU"./blisqy.py --server 192.168.56.101 --port 80 --header 'X-Forwarded-For' --hvalue 'hacker' --dig yes --sleeptime 0.1 --interactive on --inject '' or if((*sql*),sleep(*time*),0) and '1'='1'"
+echo $link"JohnTroony/Blisqy"
+}
+jsql-injection()
+{
+echo -e $Install"jsql-injection"
+echo $dir2"jsql-injection"
+echo "Instalação: https://github.com/ron190/jsql-injection#installation-jsql-injection-v081jar"
+echo $MU"https://github.com/ron190/jsql-injection#test-bed-scripts"
+echo $link"ron190/jsql-injection"
+}
+sqliv()
+{
+echo -e $Install"sqliv"
+echo $dir2"sqliv"
+echo "sudo python2 setup.py -i"
+echo $MU"python sqliv.py -d 'inurl:index.php?id=' -e google "
+echo $link"the-robot/sqliv"
+}
+sqlmate()
+{
+echo -e $Install"sqlmate"
+echo $dir2"sqlmate"
+echo "pip install -r requirements.txt"
+echo $MU"python sqlmate"
+echo $link"s0md3v/sqlmate"
+}
+enumdb()
+{
+echo -e $Install"enumdb"
+echo $dir2"enumdb"
+echo "sudo chmod +x enumdb/setup.sh && sudo ./enumdb/setup.sh"
+echo $MU"python3 enumdb.py -u sa -P passwords.txt -t mssql -columns -report xlsx 192.168.10.10"
+echo $link"m8r0wn/enumdb"
+}
+
+##SFCUFE##
+###################
+##START SFCUFE##
+SFCUFE()
+{
+    SFCUFE=("Um scanner de passagem fraca HTTP python (htpwdscan)"
+      "Bruteforcer de arquivo único suporta multi-protocolo (f-scrack)"
+      "Common User Passwords Profiler (cupp)"
+      "Bruteforcer de senha fraca Ssh\redis\mongodb (crack_ssh)"
+      "Um construtor de dicionário hacker útil para um ataque de força bruta (pydictor)"
+      "Um scanner de senha fraco do python HTTP (weak_password_detect)"
+      "Blazy é um bruteforcer de login moderno que também testa CSRF, Clickjacking, Cloudflare e WAF (blazy)"
+      "Estrutura de força bruta de aplicativos da Web, suporta Citrix Gateway, CiscoVPN e assim por diante (mybff)" "Voltar")
+  select sfcufeopt in "${SFCUFE[@]}"; do
+  if [ "$sfcufeopt" = "Um scanner de passagem fraca HTTP python (htpwdscan)" ]; then
+    htpwdscan
+    elif [ "$sfcufeopt" = "Bruteforcer de arquivo único suporta multi-protocolo (f-scrack)" ]; then
+        f-scrack
+    elif [ "$sfcufeopt" = "Common User Passwords Profiler (cupp)" ]; then
+        cupp
+    elif [ "$sfcufeopt" = "Bruteforcer de senha fraca Ssh\redis\mongodb (crack_ssh)" ]; then
+        crack_ssh
+    elif [ "$sfcufeopt" = "Um construtor de dicionário hacker útil para um ataque de força bruta (pydictor)" ]; then
+        pydictor
+    elif [ "$sfcufeopt" = "Um scanner de senha fraco do python HTTP (weak_password_detect)" ]; then
+        weak_password_detect
+    elif [ "$sfcufeopt" = "Blazy é um bruteforcer de login moderno que também testa CSRF, Clickjacking, Cloudflare e WAF (blazy)" ]; then
+        blazy
+    elif [ "$sfcufeopt" = "Estrutura de força bruta de aplicativos da Web, suporta Citrix Gateway, CiscoVPN e assim por diante (mybff)" ]; then
+        mybff
+  elif [ "$sfcufeopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SFCUFE##
+#################
+
+htpwdscan()
+{
+echo -e $Install"htpwdscan"
+echo $dir2"htpwdscan"
+echo $MU"htpwdScan.py -u=http://auth.58.com/ -basic user.txt password.txt"
+echo $link"lijiejie/htpwdScan"
+}
+f-scrack()
+{
+echo -e $Install"f-scrack"
+echo $dir2"f-scrack"
+echo $link"ysrc/F-Scrack"
+}
+cupp()
+{
+echo -e $Install"cupp"
+echo $dir2"cupp"
+echo "O CUPP possui o arquivo de configuração cupp.cfg com instruções."
+echo $MU"python3 cupp.py -h"
+echo $link"Mebus/cupp"
+}
+crack_ssh()
+{
+echo -e $Install"crack_ssh"
+echo $dir2"crack_ssh"
+echo $MU"Scan_mongodb é scanner de senha vazia mongodb, o formato de conteúdo no iplist é ip: port"
+echo $link"netxfly/crack_ssh"
+}
+pydictor()
+{
+echo -e $Install"pydictor"
+echo $dir2"pydictor"
+echo "python pydictor.py"
+echo $MU"https://github.com/LandGrey/pydictor#quick-use"
+echo $link"LandGrey/pydictor"
+}
+weak_password_detect()
+{
+echo -e $Install"weak_password_detect"
+echo $dir2"weak_password_detect"
+echo $MU"https://github.com/shengqi158/weak_password_detect#weak_password_detect"
+echo $link"shengqi158/weak_password_detect"
+}
+blazy()
+{
+echo -e $Install"blazy"
+echo $dir2"blazy"
+echo "pip install -r requirements.txt"
+echo $MU"python blazy.py"
+echo $link"s0md3v/Blazy"
+}
+mybff()
+{
+echo -e $Install"mybff"
+echo $dir2"mybff"
+echo "sudo apt-get install python-lxml && sudo pip install pysmb"
+echo $MU"python myBFF.py --host https://example.com -U userfile.txt -p password123"
+echo $link"MooseDojo/myBFF"
+}
+
+##FDIS##
+###################
+##START FDIS##
+FDIS()
+{
+    FDIS=("Scanner de dispositivos IoT com senha fraca (iotseeker)"
+    "IoT Devices Scanner via nmap (iotdb)"
+    "Testando vulnerabilidades em dispositivos e roteadores conectados à Internet (routerhunterbr)"
+    "Scanner de senha de telnet fraco baseado na enumeração de senha (telnet-scanner)"
+    "Scanner de Vulnerabilidade de Coleta de Informações de Rede, mais útil para verificar IoT (owasp-nettacker)"
+    "Estrutura de exploração para dispositivos incorporados, como roteador (routersploit)" "Voltar")
+  select fdisopt in "${FDIS[@]}"; do
+  if [ "$fdisopt" = "Scanner de dispositivos IoT com senha fraca (iotseeker)" ]; then
+    iotseeker
+    elif [ "$fdisopt" = "IoT Devices Scanner via nmap (iotdb)" ]; then
+        iotdb
+    elif [ "$fdisopt" = "Testando vulnerabilidades em dispositivos e roteadores conectados à Internet (routerhunterbr)" ]; then
+        routerhunterbr
+    elif [ "$fdisopt" = "Scanner de senha de telnet fraco baseado na enumeração de senha (telnet-scanner)" ]; then
+        telnet-scanner
+    elif [ "$fdisopt" = "Estrutura de exploração para dispositivos incorporados, como roteador (routersploit)" ]; then
+        owasp-nettacker
+  elif [ "$fdisopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END FDIS##
+#################
+
+iotseeker()
+{
+echo -e $Install""
+echo $dir2""
+echo "Certifique-se de que o perl e o cpan estejam instalados"
+echo "Instalar pacotes perl: cpan AnyEvent::HTTP Data::Dumper JSON"
+echo $MU"perl iotScanner.pl 1.1.1.1-1.1.4.254,2.1.1.1-2.2.3.254"
+echo $link"rapid7/IoTSeeker"
+}
+iotdb()
+{
+echo -e $Install"iotdb"
+echo $dir2"iotdb"
+echo $MU"nmap -n -Pn -sS -pT:0-65535 -v -A -oX <name> <ip>"
+echo $link"shodan-labs/iotdb"
+}
+routerhunterbr()
+{
+echo -e $Install"routerhunterbr"
+echo $dir2"routerhunterbr"
+echo "sudo apt-get install curl libcurl3 libcurl3-dev php5 php5-cli php5-curl"
+echo $MU"php RouterHunterBR.php --rand --limit-ip 200 --dns1  8.8.8.8 --dns2 8.8.4.4 --output result.txt"
+echo $link"googleinurl/RouterHunterBR"
+}
+telnet-scanner()
+{
+echo -e $Install"telnet-scanner"
+echo $dir2"telnet-scanner"
+echo "Instalar: mysql, python2.7"
+echo "Bibliotecas dependentes do Python: pexpect, MySQLdb, 17monip, scapy"
+ecno "Importe a tabela do banco de dados mysql mysql.sql para o banco de dados"
+echo $MU"ifconfig eth0 promisc"
+echo $MU"Configure o segmento IP a ser varrido em ip.xml Configure o par de senhas de login em auth_table em scanner.py"
+echo $MU"('usuário', 'senha', 10) usuário é o nome de usuário, senha é a senha, 10 é a vantagem"
+echo $link"scu-igroup/telnet-scanner"
+}
+owasp-nettacker()
+{
+echo -e $Install"owasp-nettacker"
+echo $dir2"owasp-nettacker"
+echo $MU"https://github.com/zdresearch/OWASP-Nettacker#owasp-nettacker"
+echo $link"zdresearch/OWASP-Nettacker"
+}
+routersploit()
+{
+echo -e $Install"routersploit"
+echo $dir2"routersploit"
+echo "https://github.com/threat9/routersploit#installation"
+echo "python3 -m pip install -r requirements.txt"
+echo $MU"python3 rsf.py"
+echo $link"threat9/routersploit"
+}
+
+##SXRBD##
+###################
+##START SXRBD##
+SXRBD()
+{
+    SXRBD=("Um pequeno script python para verificar o rastreamento entre sites (xsstracer)"
+      "Um scanner XSS refletido muito simples suporta GET/POST (fuzzxssphp)"
+      "Scanner XSS refletido (xss_scan)"
+      "Um plug-in para navegador que verifica automaticamente se uma página possui vulnerabilidades XSS e CSRF (autofindxssandcsrf)"
+      "Ferramenta de linha de comando XSS para testar listas de cargas XSS em aplicativos da Web (shuriken)"
+      "Os parâmetros fuzz e bruteforce para XSS, WAFs detectam e ignoram (xsstrike)"
+      "Um scanner de vulnerabilidade de script entre sites totalmente funcional, suportando parâmetros GET e POST e escrito em menos de 100 linhas de código (dsxs)"
+     "Voltar")
+  select sxrbdopt in "${SXRBD[@]}"; do
+  if [ "$sxrbdopt" = "Um pequeno script python para verificar o rastreamento entre sites (xsstracer)" ]; then
+    xsstracer
+    elif [ "$sxrbdopt" = "Um scanner XSS refletido muito simples suporta GET/POST (fuzzxssphp)" ]; then
+        fuzzxssphp
+    elif [ "$sxrbdopt" = "Scanner XSS refletido (xss_scan)" ]; then
+        xss_scan
+    elif [ "$sxrbdopt" = "Um plug-in para navegador que verifica automaticamente se uma página possui vulnerabilidades XSS e CSRF (autofindxssandcsrf)" ]; then
+        autofindxssandcsrf
+    elif [ "$sxrbdopt" = "Ferramenta de linha de comando XSS para testar listas de cargas XSS em aplicativos da Web (shuriken)" ]; then
+        shuriken
+    elif [ "$sxrbdopt" = "Os parâmetros fuzz e bruteforce para XSS, WAFs detectam e ignoram (xsstrike)" ]; then
+        xsstrike
+    elif [ "$sxrbdopt" = "Um scanner de vulnerabilidade de script entre sites totalmente funcional, suportando parâmetros GET e POST e escrito em menos de 100 linhas de código (dsxs)" ]; then
+        dsxs
+  elif [ "$sxrbdopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SXRBD##
+#################
+
+xsstracer()
+{
+echo -e $Install"xsstracer"
+echo $dir2"xsstracer"
+echo $MU"./xsstracer <host> <port>"
+echo $link"1N3/XSSTracer"
+}
+fuzzxssphp()
+{
+echo -e $Install"fuzzxssphp"
+echo $dir2"fuzzxssphp"
+echo $MU"https://github.com/0x584A/fuzzXssPHP"
+echo $link"0x584A/fuzzXssPHP"
+}
+xss_scan()
+{
+echo -e $Install"xss_scan"
+echo $dir2"xss_scan"
+echo $MU"./scan.py.urllib2 'http://192.168.1.7/xss.php?x'"
+echo $link"Q2h1Cg/xss_scan"
+}
+autofindxssandcsrf()
+{
+echo -e $Install"autofindxssandcsrf"
+echo $dir2"autofindxssandcsrf"
+echo "Detecção automática de plug-ins de vulnerabilidade XSS e CSRF baseada no Chrome"
+echo $MU"https://github.com/BlackHole1/autoFindXssAndCsrf"
+echo $link"BlackHole1/autoFindXssAndCsrf"
+}
+shuriken()
+{
+echo -e $Install"shuriken"
+echo $dir2"shuriken"
+echo $MU"python shuriken_xss.py -h"
+echo $link"shogunlab/shuriken"
+}
+xsstrike()
+{
+echo -e $Install"xsstrike"
+echo $dir2"xsstrike"
+echo $MU"python xsstrike.py -u 'http://example.com/search.php?q=query'"
+echo $link"s0md3v/XSStrike"
+}
+dsxs()
+{
+echo -e $Install"dsxs"
+echo $dir2"dsxs"
+echo "python dsxs.py -h"
+echo $MU"python dsxs.py -u 'http://public-firing-range.appspot.com/address/location.hash/replace'"
+echo $link"stamparm/DSXS"
+}
+
+##GACFCV##
+###################
+##START GACFCV##
+GACFCV()
+{
+    GACFCV=("Resposta rápida de vulnerabilidade, sistema de varredura para Intranet (xunfeng)" 
+      "Coletor de nomes de pessoas, subdomínio e e-mail (theharvester)" 
+      "Coletor de ativos da empresa com base no mecanismo de pesquisa (multisearch-v2)" 
+      "Uma ferramenta avançada de busca de idiotas que é capaz de encontrar um endereço IP / URL bloqueado pelo mecanismo de busca, e pode executar verificações do sqlmap e nmap nas URLs (zeus-scanner)" 
+      "Security Scan Framework para serviços baseados em intranet empresarial (biu-framework)" 
+      "Usado para colher informações do GitHub (githarvester)" 
+      "Uma .svn exploração de divulgação de pasta (svnhack)" 
+      "Pesquisando arquivos e conteúdos sensíveis no GitHub (gitprey)" 
+      "Github vaza digitalizar foe enterprise (hawkeye)" 
+      "Ferramenta de pesquisa avançada e automação no Github (gitminer)" 
+      "Uma .git exploração de divulgação de pasta (githack)" 
+      "Pesquisa strings de alta entropia através de repositórios git (trufflehog)" 
+      "Inicie automaticamente as consultas do Google Hacking contra um domínio de destino (goohak)" 
+      "Ferramenta CLI que encontra segredos acidentalmente comprometidos com um repositório git, por exemplo, senhas, chaves privadas (repo-security-scanner)" 
+      "Vazamento de Informações Sensíveis ao Github (gsil)" 
+      "Github vazou patrulha (x-patrol)" 
+      "Reúna OSINT e fuzz para vulnerabilidades OWASP em um site de destino (blackwidow)" 
+      "Uma ferramenta para capturar todos os segredos do git, aproveitando várias ferramentas de pesquisa de código aberto do git (git-all-secrets)" 
+      "Incrivelmente rápido crawler que extrai urls, e-mails, arquivos, contas de sites e muito mais. (photon)" 
+      "Monitor de Vazamento de Informações Sensíveis ao Github por vipkid SRC (github-monitor)" 
+     "Voltar")
+  select gacfcvopt in "${GACFCV[@]}"; do
+  if [ "$gacfcvopt" = "Resposta rápida de vulnerabilidade, sistema de varredura para Intranet (xunfeng)" ]; then
+    xunfeng
+    elif [ "$gacfcvopt" = "Coletor de nomes de pessoas, subdomínio e e-mail (theharvester)" ]; then
+        theharvester
+    elif [ "$gacfcvopt" = "Coletor de ativos da empresa com base no mecanismo de pesquisa (multisearch-v2)" ]; then
+        multisearch-v2
+    elif [ "$gacfcvopt" = "Uma ferramenta avançada de busca de idiotas que é capaz de encontrar um endereço IP / URL bloqueado pelo mecanismo de busca, e pode executar verificações do sqlmap e nmap nas URLs (zeus-scanner)" ]; then
+        zeus-scanner
+    elif [ "$gacfcvopt" = "Security Scan Framework para serviços baseados em intranet empresarial (biu-framework)" ]; then
+        biu-framework
+    elif [ "$gacfcvopt" = "Usado para colher informações do GitHub (githarvester)" ]; then
+        githarvester
+    elif [ "$gacfcvopt" = "Uma .svn exploração de divulgação de pasta (svnhack)" ]; then
+        svnhack
+    elif [ "$gacfcvopt" = "Pesquisando arquivos e conteúdos sensíveis no GitHub (gitprey)" ]; then
+        gitprey
+    elif [ "$gacfcvopt" = "Github vaza digitalizar foe enterprise (hawkeye)" ]; then
+        hawkeye
+    elif [ "$gacfcvopt" = "Ferramenta de pesquisa avançada e automação no Github (gitminer)" ]; then
+        gitminer
+    elif [ "$gacfcvopt" = "Uma .git exploração de divulgação de pasta (githack)" ]; then
+        githack
+    elif [ "$gacfcvopt" = "Pesquisa strings de alta entropia através de repositórios git (trufflehog)" ]; then
+        trufflehog
+    elif [ "$gacfcvopt" = "Inicie automaticamente as consultas do Google Hacking contra um domínio de destino (goohak)" ]; then
+        goohak
+    elif [ "$gacfcvopt" = "Ferramenta CLI que encontra segredos acidentalmente comprometidos com um repositório git, por exemplo, senhas, chaves privadas (repo-security-scanner)" ]; then
+        repo-security-scanner
+    elif [ "$gacfcvopt" = "Vazamento de Informações Sensíveis ao Github (gsil)" ]; then
+        gsil
+    elif [ "$gacfcvopt" = "Github vazou patrulha (x-patrol)" ]; then
+        x-patrol
+    elif [ "$gacfcvopt" = "Reúna OSINT e fuzz para vulnerabilidades OWASP em um site de destino (blackwidow)" ]; then
+        blackwidow
+    elif [ "$gacfcvopt" = "Uma ferramenta para capturar todos os segredos do git, aproveitando várias ferramentas de pesquisa de código aberto do git (git-all-secrets)" ]; then
+        git-all-secrets
+    elif [ "$gacfcvopt" = "Incrivelmente rápido crawler que extrai urls, e-mails, arquivos, contas de sites e muito mais. (photon)" ]; then
+        photon
+    elif [ "$gacfcvopt" = "Monitor de Vazamento de Informações Sensíveis ao Github por vipkid SRC (github-monitor)" ]; then
+        github-monitor
+  elif [ "$gacfcvopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END GACFCV##
+#################
+
+xunfeng()
+{
+echo -e $Install"xunfeng"
+echo $dir2"xunfeng"
+echo "https://github.com/ysrc/xunfeng/blob/master/docs/install/Linux.md"
+echo $MU"https://github.com/ysrc/xunfeng#%E5%B7%A1%E9%A3%8E-"
+echo $link"ysrc/xunfeng"
+}
+theharvester()
+{
+echo -e $Install"theharvester"
+echo $dir2"theharvester"
+echo "python3 -m pip install -r requirements.txt"
+echo $MU"./theHarvester.py -d hotmail.com -b all -l 1000000"
+echo $link"laramies/theHarvester"
+}
+multisearch-v2()
+{
+echo -e $Install"multisearch-v2"
+echo $dir2"multisearch-v2"
+echo $MU"http://x0day.me/archives/.html"
+echo $link"x0day/Multisearch-v2"
+}
+zeus-scanner()
+{
+echo -e $Install"zeus-scanner"
+echo $dir2"zeus-scanner"
+echo "Ubuntu/Debian: sudo apt-get install libxml2-dev libxslt1-dev python-dev"
+echo "Ubuntu/Debian: sudo pip2 install -r requirements.txt"
+echo $MU"python zeus.py"
+echo $link"Ekultek/Zeus-Scanner"
+}
+biu-framework()
+{
+echo -e $Install"biu-framework"
+echo $dir2"biu-framework"
+echo "pip install -r requirements.txt"
+echo $MU"python biu.py -p elasticsearch -f target/elasticsearch.txt"
+echo $link"0xbug/Biu-framework"
+}
+githarvester()
+{
+echo -e $Install"githarvester"
+echo $dir2"githarvester"
+echo $MU"./githarvester.py -h"
+echo $link"metac0rtex/GitHarvester"
+}
+svnhack()
+{
+echo -e $Install"svnhack"
+echo $dir2"svnhack"
+echo $MU"shengqi158/svnhack"
+echo $link"shengqi158/svnhack"
+}
+gitprey()
+{
+echo -e $Install"gitprey"
+echo $dir2"gitprey"
+echo $MU"https://github.com/repoog/GitPrey#%E7%A8%8B%E5%BA%8F%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A9"
+echo $link"repoog/GitPrey"
+}
+hawkeye()
+{
+echo -e $Install"hawkeye"
+echo $dir2"hawkeye"
+echo $MU"https://github.com/0xbug/Hawkeye#%E5%AE%89%E8%A3%85docker-%E9%83%A8%E7%BD%B2"
+echo $link"0xbug/Hawkeye"
+}
+gitminer()
+{
+echo -e $Install"gitminer"
+echo $dir2"gitminer"
+echo "./GitMiner $ pip3 install -r requirements.txt"
+echo $MU"python3 gitminer-v2.0.py -q 'filename:wp-config extension:php FTP_HOST in:file ' -m wordpress -c pAAAhPOma9jEsXyLWZ-16RTTsGI8wDawbNs4 -o result.txt"
+echo $link"UnkL4b/GitMiner"
+}
+githack()
+{
+echo -e $Install"githack"
+echo $dir2"githack"
+echo ""
+echo $MU"GitHack.py http://www.openssl.org/.git/"
+echo $link"lijiejie/GitHack"
+}
+trufflehog()
+{
+echo -e $Install"trufflehog"
+echo $dir2"trufflehog"
+echo "pip install truffleHog"
+echo $MU"https://github.com/dxa4481/truffleHog#help"
+echo $link"dxa4481/truffleHog"
+}
+goohak()
+{
+echo -e $Install"goohak"
+echo $dir2"goohak"
+echo "Instalar: xdg-open"
+echo $MU"./goohak domain.com"
+echo $link"1N3/Goohak"
+}
+repo-security-scanner()
+{
+echo -e $Install"repo-security-scanner"
+echo $dir2"repo-security-scanner"
+echo "Extraia o conteudo e mova o scanrepo binário para algum lugar no seu $PATH, por exemplo/usr/bin"
+echo $MU"git log -p | scanrepo"
+echo $link"UKHomeOffice/repo-security-scanner"
+}
+gsil()
+{
+echo -e $Install"gsil"
+echo $dir2"gsil"
+echo "pip install -r requirements.txt"
+echo $MU"python gsil.py --verify-tokens"
+echo $link"FeeiCN/GSIL"
+}
+x-patrol()
+{
+echo -e $Install"x-patrol"
+echo $dir2"x-patrol"
+echo $MU"./main"
+echo $link"MiSecurity/x-patrol"
+}
+blackwidow()
+{
+echo -e $Install"blackwidow"
+echo $dir2"blackwidow"
+echo "cp blackwidow /usr/bin/blackwidow"
+echo "cp injectx.py /usr/bin/injectx.py"
+echo "pip install -r requirements.txt"
+echo $MU"blackwidow -u https://target.com - crawl target.com"
+echo $MU"injectx.py -u https://test.com/uers.php?user=1&admin=true -v y"
+echo $link"1N3/BlackWidow"
+}
+git-all-secrets()
+{
+echo -e $Install"git-all-secrets"
+echo $dir2"git-all-secrets"
+echo $MU"https://github.com/anshumanbh/git-all-secrets#git-all-secrets"
+echo $link"anshumanbh/git-all-secrets"
+}
+photon()
+{
+echo -e $Install"photon"
+echo $dir2"photon"
+echo $MU"python photon.py -u https://example.com/gallery.php?id=2 -l 3 -t 100 -wayback"
+echo $link"s0md3v/Photon"
+}
+github-monitor()
+{
+echo -e $Install"github-monitor"
+echo $dir2"github-monitor"
+echo $MU"https://github.com/VKSRC/Github-Monitor#%E7%B3%BB%E7%BB%9F%E7%89%B9%E7%82%B9"
+echo $link"VKSRC/Github-Monitor"
+}
+
+##DWFAM##
+###################
+##START DWFAM##
+DWFAM()
+{
+    DWFAM=("Detector simples de webshell (findwebshell)" 
+      "Usado para análise automatizada de malware e avaliação de segurança no sistema Linux (habomalhunter)" 
+      "Open source multiple framework de scanner AV (plaguescanner)" 
+      "Uma ferramenta incrível para detectar arquivos PHP potencialmente maliciosos (php-malware-finder)" 
+      "Ajuda a encontrar e identificar shell php/cgi(perl)/asp/aspx (php-shell-detector)" 
+      "Detector simples de webshell (scan_webshell)" 
+      "Um aplicativo que ajuda a encontrar e identificar shells php/perl/asp/aspx (shell-detector)" 
+      "Uma estrutura de análise de malware / botnet escrita em Ruby (dorothy2)" 
+      "Advance Android Malware Analysis Framework (engine)"
+     "Voltar")
+  select dwfamopt in "${DWFAM[@]}"; do
+  if [ "$dwfamopt" = "Detector simples de webshell (findwebshell)" ]; then
+    findwebshell
+    elif [ "$dwfamopt" = "Usado para análise automatizada de malware e avaliação de segurança no sistema Linux (habomalhunter)" ]; then
+        habomalhunter
+    elif [ "$dwfamopt" = "Open source multiple framework de scanner AV (plaguescanner)" ]; then
+        plaguescanner
+    elif [ "$dwfamopt" = "Uma ferramenta incrível para detectar arquivos PHP potencialmente maliciosos (php-malware-finder)" ]; then
+        php-malware-finder
+    elif [ "$dwfamopt" = "Ajuda a encontrar e identificar shell php/cgi(perl)/asp/aspx (php-shell-detector)" ]; then
+        php-shell-detector
+    elif [ "$dwfamopt" = "Detector simples de webshell (scan_webshell)" ]; then
+        scan_webshell
+    elif [ "$dwfamopt" = "Um aplicativo que ajuda a encontrar e identificar shells php/perl/asp/aspx (shell-detector)" ]; then
+        shell-detector
+    elif [ "$dwfamopt" = "Uma estrutura de análise de malware / botnet escrita em Ruby (dorothy2)" ]; then
+        dorothy2
+    elif [ "$dwfamopt" = "Advance Android Malware Analysis Framework (engine)" ]; then
+        engine
+  elif [ "$dwfamopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END DWFAM##
+#################
+
+findwebshell()
+{
+echo -e $Install"findwebshell"
+echo $dir2"findwebshell"
+echo $MU"python main.py -e php -p /var/www/test -o output"
+echo $link"he1m4n6a/findWebshell"
+}
+habomalhunter()
+{
+echo -e $Install"habomalhunter"
+echo $dir2"habomalhunter"
+echo $MU"https://github.com/Tencent/HaboMalHunter#introduction"
+echo $link"Tencent/HaboMalHunter"
+}
+plaguescanner()
+{
+echo -e $Install"plaguescanner"
+echo $dir2"plaguescanner"
+echo "https://github.com/PlagueScanner/PlagueScanner#plaguescanner"
+echo $MU"./plaguescanner.py sample.exe"
+echo $link"PlagueScanner/PlagueScanner"
+}
+php-malware-finder()
+{
+echo -e $Install"php-malware-finder"
+echo $dir2"php-malware-finder"
+echo "sudo apt-get install yara"
+echo $MU"./phpmalwarefinder -h"
+echo $link"nbs-system/php-malware-finder"
+}
+php-shell-detector()
+{
+echo -e $Install"php-shell-detector"
+echo $dir2"php-shell-detector"
+echo "Requerido: PHP 5.x, OpenSSL (somente para envio seguro de arquivos)"
+echo $MU"https://github.com/emposha/PHP-Shell-Detector#usage"
+echo $link"emposha/PHP-Shell-Detector"
+}
+scan_webshell()
+{
+echo -e $Install"scan_webshell"
+echo $dir2"scan_webshell"
+echo $MU"python ./webshell_scaner.py /home/thallescanela/"
+echo $link"erevus-cn/scan_webshell"
+}
+shell-detector()
+{
+echo -e $Install"shell-detector"
+echo $dir2"shell-detector"
+echo $MU"python shelldetect.py -r true -d ./"
+echo $link"emposha/Shell-Detector"
+}
+dorothy2()
+{
+echo -e $Install"dorothy2"
+echo $dir2"dorothy2"
+echo $MU"https://github.com/m4rco-/dorothy2#installation"
+echo $link"m4rco-/dorothy2"
+}
+engine()
+{
+echo -e $Install"engine"
+echo $dir2"engine"
+echo $MU"https://github.com/droidefense/engine#droidefense-features"
+echo $link"droidefense/engine"
+}
+
+##FPIS##
+###################
+##START FPIS##
+FPIS()
+{
+    FPIS=("Um scanner de rede interno como o meterpreter (network_backdoor_scanner)" 
+      "User hunter usando apenas chamadas WinAPI (hunter)" 
+      "Usar intranet Invadir a automação XSS (webrtcxss)" 
+      "Voltar")
+  select fpisopt in "${FPIS[@]}"; do
+  if [ "$fpisopt" = "Um scanner de rede interno como o meterpreter (network_backdoor_scanner)" ]; then
+    network_backdoor_scanner
+    elif [ "$fpisopt" = "User hunter usando apenas chamadas WinAPI (hunter)" ]; then
+        hunter
+    elif [ "$fpisopt" = "Usar intranet Invadir a automação XSS (webrtcxss)" ]; then
+        webrtcxss
+  elif [ "$fpisopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END FPIS##
+#################
+
+network_backdoor_scanner()
+{
+echo -e $Install"network_backdoor_scanner"
+echo $dir2"network_backdoor_scanner"
+echo $MU"https://github.com/lcatro/network_backdoor_scanner#scanner_framework"
+echo $link"lcatro/network_backdoor_scanner"
+}
+hunter()
+{
+echo -e $Install"hunter"
+echo $dir2"hunter"
+echo $MU"https://github.com/fdiskyou/hunter#how-to-use-it"
+echo $link"fdiskyou/hunter"
+}
+webrtcxss()
+{
+echo -e $Install"webrtcxss"
+echo $dir2"webrtcxss"
+echo $MU"https://github.com/BlackHole1/WebRtcXSS#webrtcxss"
+echo $link"BlackHole1/WebRtcXSS"
+}
+
+##FPIS##
+###################
+##START FPIS##
+FPIS()
+{
+    FPIS=("Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" 
+      "Ferramenta de detecção de vazamento de informações confidenciais multi-thread dinâmica (weakfilescan)" 
+      "Identifique e faça impressões digitais do Firewall de Aplicativos da Web (wafw00f)" 
+      "Testa serviços ativados para SSL / TLS para descobrir conjuntos de cifras suportados (sslscan)" 
+      "Website Fingerprinter (whatweb)" 
+      "Outro site Fingerprinter (fingerprint)" 
+      "Uma nova aranha baseada em python com mais funções, incluindo pesquisa de impressão digital da rede (scan-t)" 
+      "Scanner de acesso rápido à Internet (nscan)" 
+      "Verificando um script de informações de ativos de rede (f-nascan)" 
+      "Scripts de detecção de vulnerabilidades para serviços de middleware (f-middlewarescan)" 
+      "Scanner de caminho da Web (dirsearch)" 
+      "Banner de segmento C com scanner de caminho (bannerscan)" 
+      "Scanners internos de velocidade de porta de rede (rasscan)" 
+      "Ferramenta Automática de Fusão do WAF Bypass (bypass_waf)" 
+      "Tente descobrir o ip real por trás do cdn (xcdn)" 
+      "Com base na consulta do mecanismo de pesquisa C / consulta de parada lateral, multi-threaded, suportada (bingc)" 
+      "Ferramenta de enumeração de diretório WEB multi-thread (dirbrute)" 
+      "Um detector de serviço HTTP com um rastreador de IP / CIDR (httpscan)" 
+      "Distribuição de tarefas distribuídas do scanner de vulnerabilidades de porta ip baseado em espinhos (doom)" 
+      "Fast TCP banner pega como zgrab, mas suporta muito mais protocolo (grab.js)" 
+      "Detectar se um determinado site está protegido por uma Content Delivery Network (whichcdn)" 
+      "Base no rastreador do caminho da web do resultado do rastreador (bcrpscan)" 
+      "Uma configuração protótipo de SSH e scanner de política (ssh_scan)" 
+      "Verifica domínios para dados em sua configuração HTTPS e variados outros itens (domain-scan)" 
+      "Uma ferramenta criada para coletar informações de qualquer domínio apontando para um servidor e fingerprinter (inforfinder)" 
+      "Fingerprinter for CMS (gwhatweb)" 
+      "Scanner de arquivos sensíveis (filescan)" 
+      "Ferramenta de detecção de arquivos dinâmicos baseada no rastreador (filesensor)" 
+      "Ferramenta de Descoberta de Conteúdo da Web (cansina)" 
+      "Uma maneira muito simples de descobrir quais ciphersuites SSL são suportados por um destino (cipherscan)" 
+      "Fuzzer de aplicativo da Web/estrutura e scanner de conteúdo da web (wfuzz)" 
+      "Um localizador de painel de administração multithreaded avançado escrito em python (breacher)" 
+      "Um scanner de credenciais padrão (changeme)" 
+      "Uma ferramenta de teste de penetração de código aberto que pode analisar pacotes, decodificação, portas de varredura, ping e geolocalização de um IP (cyberscan)" 
+      "HellRaiser faz a varredura com nmap e depois correlaciona cpe's encontrados com cve-search para enumerar vulnerabilidades (hellraiser)" 
+      "Verificação avançada de vulnerabilidades com o Nmap NSE (vulscan)" 
+      "WebApp Information Gatherer (wig)" 
+      "Analise a segurança de qualquer domínio encontrando todas as informações possíveis (domain_analyzer)" 
+      "Verificador de diretório passivo e rastreador da Web com base no Nikto DB (paskto)" 
+      "Um serviço da Web e fingerprinter WAF (webeye)" 
+      "Basta verificar os cabeçalhos de segurança em um site de destino (shcheck)" 
+      "Um scanner de velocidade e sensível de arquivos sensíveis (sensitivefilescan)" 
+      "Um localizador rápido e poderoso do painel de controle (admin) (cangibrina)" 
+      "Ferramenta para identificar se um domínio é um CMS como Wordpress, Moodle, Joomla (cmssc4n)" 
+      "Detectar e ignorar firewalls e sistemas de proteção de aplicativos da web (whatwaf)" 
+      "Teste de penetração de aplicativos da Web e ferramenta fuzz de aplicativos da Web (gowapt)" 
+      "Scanner de arquivos sensíveis (webdirdig)" 
+      "Ferramenta de coleta de informações para um site ou endereço IP (billcipher)" 
+      "Obtenha o endereço IP real do site digitalizando toda a rede (w8fuckcdn)" 
+      "Plataforma de identificação de impressão digital distribuída WEB (w11scan)" 
+      "Encontre diretórios da web sem força bruta (dirhunt)" 
+      "Procura no diretório de escolha por arquivos interessantes. Como arquivos de banco de dados e arquivos com senhas armazenados neles (pyhawk)" "Voltar")
+  select fpisopt in "${FPIS[@]}"; do
+  if [ "$fpisopt" = "Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" ]; then
+    wyportmap
+    elif [ "$fpisopt" = "Ferramenta de detecção de vazamento de informações confidenciais multi-thread dinâmica (weakfilescan)" ]; then
+        weakfilescan
+    elif [ "$fpisopt" = "Identifique e faça impressões digitais do Firewall de Aplicativos da Web (wafw00f)" ]; then
+        wafw00f
+    elif [ "$fpisopt" = "Testa serviços ativados para SSL / TLS para descobrir conjuntos de cifras suportados (sslscan)" ]; then
+        sslscan
+    elif [ "$fpisopt" = "Website Fingerprinter (whatweb)" ]; then
+        whatweb
+    elif [ "$fpisopt" = "Outro site Fingerprinter (fingerprint)" ]; then
+        fingerprint
+    elif [ "$fpisopt" = "Uma nova aranha baseada em python com mais funções, incluindo pesquisa de impressão digital da rede (scan-t)" ]; then
+        scan-t
+    elif [ "$fpisopt" = "Scanner de acesso rápido à Internet (nscan)" ]; then
+        nscan
+    elif [ "$fpisopt" = "Verificando um script de informações de ativos de rede (f-nascan)" ]; then
+        f-nascan
+    elif [ "$fpisopt" = "Scripts de detecção de vulnerabilidades para serviços de middleware (f-middlewarescan)" ]; then
+        f-middlewarescan
+    elif [ "$fpisopt" = "Scanner de caminho da Web (dirsearch)" ]; then
+        dirsearch
+    elif [ "$fpisopt" = "Banner de segmento C com scanner de caminho (bannerscan)" ]; then
+        bannerscan
+    elif [ "$fpisopt" = "Scanners internos de velocidade de porta de rede (rasscan)" ]; then
+        rasscan
+    elif [ "$fpisopt" = "Ferramenta Automática de Fusão do WAF Bypass (bypass_waf)" ]; then
+        bypass_waf
+    elif [ "$fpisopt" = "Tente descobrir o ip real por trás do cdn (xcdn)" ]; then
+        xcdn
+    elif [ "$fpisopt" = "Com base na consulta do mecanismo de pesquisa C / consulta de parada lateral, multi-threaded, suportada (bingc)" ]; then
+        bingc
+    elif [ "$fpisopt" = "Ferramenta de enumeração de diretório WEB multi-thread (dirbrute)" ]; then
+        dirbrute
+    elif [ "$fpisopt" = "Um detector de serviço HTTP com um rastreador de IP / CIDR (httpscan)" ]; then
+        httpscan
+    elif [ "$fpisopt" = "Distribuição de tarefas distribuídas do scanner de vulnerabilidades de porta ip baseado em espinhos (doom)" ]; then
+        doom
+    elif [ "$fpisopt" = "Fast TCP banner pega como zgrab, mas suporta muito mais protocolo (grab.js)" ]; then
+        grab.js
+    elif [ "$fpisopt" = "Detectar se um determinado site está protegido por uma Content Delivery Network (whichcdn)" ]; then
+        whichcdn
+    elif [ "$fpisopt" = "Base no rastreador do caminho da web do resultado do rastreador (bcrpscan)" ]; then
+        bcrpscan
+    elif [ "$fpisopt" = "Uma configuração protótipo de SSH e scanner de política (ssh_scan)" ]; then
+        ssh_scan
+    elif [ "$fpisopt" = "Verifica domínios para dados em sua configuração HTTPS e variados outros itens (domain-scan)" ]; then
+        domain-scan
+    elif [ "$fpisopt" = "Uma ferramenta criada para coletar informações de qualquer domínio apontando para um servidor e fingerprinter (inforfinder)" ]; then
+        inforfinder
+    elif [ "$fpisopt" = "Fingerprinter for CMS (gwhatweb)" ]; then
+        gwhatweb
+    elif [ "$fpisopt" = "Scanner de arquivos sensíveis (filescan)" ]; then
+        filescan
+    elif [ "$fpisopt" = "Ferramenta de detecção de arquivos dinâmicos baseada no rastreador (filesensor)" ]; then
+        filesensor
+    elif [ "$fpisopt" = "Ferramenta de Descoberta de Conteúdo da Web (cansina)" ]; then
+        cansina
+    elif [ "$fpisopt" = "Uma maneira muito simples de descobrir quais ciphersuites SSL são suportados por um destino (cipherscan)" ]; then
+        cipherscan
+    elif [ "$fpisopt" = "Fuzzer de aplicativo da Web/estrutura e scanner de conteúdo da web (wfuzz)" ]; then
+        wfuzz
+    elif [ "$fpisopt" = "Um localizador de painel de administração multithreaded avançado escrito em python (breacher)" ]; then
+        breacher
+    elif [ "$fpisopt" = "Um scanner de credenciais padrão (changeme)" ]; then
+        changeme
+    elif [ "$fpisopt" = "Uma ferramenta de teste de penetração de código aberto que pode analisar pacotes, decodificação, portas de varredura, ping e geolocalização de um IP (cyberscan)" ]; then
+        cyberscan
+    elif [ "$fpisopt" = "HellRaiser faz a varredura com nmap e depois correlaciona cpe's encontrados com cve-search para enumerar vulnerabilidades (hellraiser)" ]; then
+        hellraiser
+    elif [ "$fpisopt" = "Verificação avançada de vulnerabilidades com o Nmap NSE (vulscan)" ]; then
+        vulscan
+    elif [ "$fpisopt" = "WebApp Information Gatherer (wig)" ]; then
+        wig
+    elif [ "$fpisopt" = "Analise a segurança de qualquer domínio encontrando todas as informações possíveis (domain_analyzer)" ]; then
+        domain_analyzer
+    elif [ "$fpisopt" = "Verificador de diretório passivo e rastreador da Web com base no Nikto DB (paskto)" ]; then
+        paskto
+    elif [ "$fpisopt" = "Um serviço da Web e fingerprinter WAF (webeye)" ]; then
+        webeye
+    elif [ "$fpisopt" = "Basta verificar os cabeçalhos de segurança em um site de destino (shcheck)" ]; then
+        shcheck
+    elif [ "$fpisopt" = "Um scanner de velocidade e sensível de arquivos sensíveis (sensitivefilescan)" ]; then
+        sensitivefilescan
+    elif [ "$fpisopt" = "Um localizador rápido e poderoso do painel de controle (admin) (cangibrina)" ]; then
+        cangibrina
+    elif [ "$fpisopt" = "Ferramenta para identificar se um domínio é um CMS como Wordpress, Moodle, Joomla (cmssc4n)" ]; then
+        cmssc4n
+    elif [ "$fpisopt" = "Detectar e ignorar firewalls e sistemas de proteção de aplicativos da web (whatwaf)" ]; then
+        whatwaf
+    elif [ "$fpisopt" = "Teste de penetração de aplicativos da Web e ferramenta fuzz de aplicativos da Web (gowapt)" ]; then
+        gowapt
+    elif [ "$fpisopt" = "Scanner de arquivos sensíveis (webdirdig)" ]; then
+        webdirdig
+    elif [ "$fpisopt" = "Ferramenta de coleta de informações para um site ou endereço IP (billcipher)" ]; then
+        billcipher
+    elif [ "$fpisopt" = "Obtenha o endereço IP real do site digitalizando toda a rede (w8fuckcdn)" ]; then
+        w8fuckcdn
+    elif [ "$fpisopt" = "Plataforma de identificação de impressão digital distribuída WEB (w11scan)" ]; then
+        w11scan
+    elif [ "$fpisopt" = "Encontre diretórios da web sem força bruta (dirhunt)" ]; then
+        dirhunt
+    elif [ "$fpisopt" = "Procura no diretório de escolha por arquivos interessantes. Como arquivos de banco de dados e arquivos com senhas armazenados neles (pyhawk)" ]; then
+        pyhawk
+  elif [ "$fpisopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END FPIS##
+#################
+
+wyportmap()
+{
+echo -e $Install"wyportmap"
+echo $dir2"wyportmap"
+echo "Kali/Ubuntu/Debian: sudo apt-get install nmap"
+echo "sudo apt-get install python-dev libmysqld-dev libmysqlclient-dev"
+echo "pip install MySQL-python "
+echo $MU"wyportmap.py targets taskid"
+echo $link"ring04h/wyportmap"
+}
+weakfilescan()
+{
+echo -e $Install"weakfilescan"
+echo $dir2"weakfilescan"
+echo "CentOS 6.* 7.* Linux: yum install python-devel libxml2-devel libxslt-devel"
+echo "pip install lxml beautifulsoup4"
+echo $MU"python wyspider.py http://wuyun.org php"
+echo $link"ring04h/weakfilescan"
+}
+wafw00f()
+{
+echo -e $Install"wafw00f"
+echo $dir2"wafw00f"
+echo "python setup.py install ou pip install wafw00f"
+echo $MU"wafw00f https://www.ibm.com/"
+echo $link""
+}
+sslscan()
+{
+echo -e $Install"sslscan"
+echo $dir2"sslscan"
+echo "apt-get install build-essential git zlib1g-dev"
+echo "apt-get build-dep openssl"
+echo $MU"make static"
+echo $link"rbsec/sslscan"
+}
+whatweb()
+{
+echo -e $Install"whatweb"
+echo $dir2"whatweb"
+echo "sudo apt-get install ruby ruby-dev libopenssl-ruby"
+echo "gem install bundler"
+echo "bundle install"
+echo "bundle update"
+echo "sudo gem install bson bson_ext mongo"
+echo "sudo gem install rchardet"
+echo $MU""
+echo $link""
+}
+fingerprint()
+{
+echo -e $Install"fingerprint"
+echo $dir2"fingerprint"
+echo $MU"perl FingerPrint.pl www.tanjiti.com"
+echo $link"tanjiti/FingerPrint"
+}
+scan-t()
+{
+echo -e $Install"scan-t"
+echo $dir2"scan-t"
+echo "Requerido: Zmap, Nmap"
+echo "Instalação: https://github.com/nanshihui/Scan-T/wiki/Install-introduction"
+echo $MU"sudo python spidermanage/manage.py runserver localhost:80 --insecure"
+echo $link"nanshihui/Scan-T"
+}
+nscan()
+{
+echo -e $Install"nscan"
+echo $dir2"nscan"
+echo "Debian/Ubuntu: cd Nscan/latest && chmod +x nscan.py"
+echo $MU"./nscan.py"
+echo $link"OffensivePython/Nscan"
+}
+f-nascan()
+{
+echo -e $Install"f-nascan"
+echo $dir2"f-nascan"
+echo $MU"python NAScan.py -h 10.111.1.22 -p 80,7001,8080 -m 200 -t 6"
+echo $link"ywolf/F-NAScan"
+}
+f-middlewarescan()
+{
+echo -e $Install"f-middlewarescan"
+echo $dir2"f-middlewarescan"
+echo $MU"hpython F-MiddlewareScan.py -h 10.111.1.22 -p 80,7001,8080 -m 200 -t 6"
+echo $link"y1ng1996/F-MiddlewareScan"
+}
+dirsearch()
+{
+echo -e $Install"dirsearch"
+echo $dir2"dirsearch"
+echo $MU"https://github.com/maurosoria/dirsearch#dirsearch"
+echo $link"maurosoria/dirsearch"
+}
+bannerscan()
+{
+echo -e $Install"bannerscan"
+echo $dir2"bannerscan"
+echo $MU"http://x0day.me/archives/bannerscan-py.html"
+echo $link"x0day/bannerscan"
+}
+rasscan()
+{
+echo -e $Install"rasscan"
+echo $dir2"rasscan"
+echo $MU"demo.py 192.168.1.1 192.168.254.254 -t 20"
+echo $link"RASSec/RASscan"
+}
+bypass_waf()
+{
+echo -e $Install"bypass_waf"
+echo $dir2"bypass_waf"
+echo "Requido: python3, pip3, mysql"
+echo "apt-get install -y python3-pip"
+echo "https://pip.pypa.io/en/stable/installing"
+echo $MU"python3 xwaf.py -r /tmp/headerfile -p xxx --risk 3 --level 5"
+echo $link"3xp10it/bypass_waf"
+}
+xcdn()
+{
+echo -e $Install"xcdn"
+echo $dir2"xcdn"
+echo $MU"python3 xcdn.py www.baidu.com"
+echo $link"3xp10it/xcdn"
+}
+bingc()
+{
+echo -e $Install"bingc"
+echo $dir2"bingc"
+echo "https://github.com/Xyntax/BingC#bingc"
+echo $MU"python bingC.py 139.129.132.156"
+echo $link"Xyntax/BingC"
+}
+dirbrute()
+{
+echo -e $Install"dirbrute"
+echo $dir2"dirbrute"
+echo $MU"python dirbrute.py www.cdxy.me -e php -t 10"
+echo $link"Xyntax/DirBrute"
+}
+httpscan()
+{
+echo -e $Install"httpscan"
+echo $dir2"httpscan"
+echo $MU"./httpscan.py 10.20.30.0/24 –t 10"
+echo $link"zer0h/httpscan"
+}
+doom()
+{
+echo -e $Install"doom"
+echo $dir2"doom"
+echo $MU"https://github.com/lietdai/doom#doom_sec"
+echo $link"lietdai/doom"
+}
+grab.js()
+{
+echo -e $Install"grab.js"
+echo $dir2"grab.js"
+echo $MU"https://github.com/chichou/grab.js#quick-example"
+echo $link"chichou/grab.js"
+}
+whichcdn()
+{
+echo -e $Install"whichcdn"
+echo $dir2"whichcdn"
+echo "pip install -r requirements.txt"
+echo $MU"whichCDN http://www.example.com | example.com"
+echo $link"Nitr4x/whichCDN"
+}
+bcrpscan()
+{
+echo -e $Install"bcrpscan"
+echo $dir2"bcrpscan"
+echo $MU"python bcrpscan.py -i test_urls"
+echo $link"secfree/bcrpscan"
+}
+ssh_scan()
+{
+echo -e $Install"ssh_scan"
+echo $dir2"ssh_scan"
+echo "gem install ssh_scan"
+echo "ssh_scan"
+echo $MU"ssh_scan -t 192.168.1.1 -p 22222 -L output.log -V INFO"
+echo $link"mozilla/ssh_scan"
+}
+domain-scan()
+{
+echo -e $Install"domain-scan"
+echo $dir2"domain-scan"
+echo "https://github.com/18F/domain-scan#requirements"
+echo $MU"./scan whitehouse.gov --scan=pshtt,sslyze"
+echo $link"18F/domain-scan"
+}
+inforfinder()
+{
+echo -e $Install"inforfinder"
+echo $dir2"inforfinder"
+echo "sudo apt-get install python-dns python-dnspython python-requests python-lxml python"
+echo $MU"./inforfinder <command> --subdomain-enum "
+echo $link"ggusoft/inforfinder"
+}
+gwhatweb()
+{
+echo -e $Install"gwhatweb"
+echo $dir2"gwhatweb"
+echo "pip install requests,gevent"
+echo $MU"python gwhatweb.py http://wwww.xxxx.com"
+echo $link"boy-hack/gwhatweb"
+}
+filescan()
+{
+echo -e $Install"filescan"
+echo $dir2"filescan"
+echo "pip install requests"
+echo $MU"https://github.com/Mosuan/FileScan#filescan-v1"
+echo $MU"python filescan.py http://www.0aa.me/0aa/index.php"
+echo $link"Mosuan/FileScan"
+}
+filesensor()
+{
+echo -e $Install"filesensor"
+echo $dir2"filesensor"
+echo "pip3 install -r requirement.txt"
+echo $MU"python3 filesensor.py https://www.cdxy.me --404 '404 File not Found!'"
+echo $link"Xyntax/FileSensor"
+}
+cansina()
+{
+echo -e $Install"cansina"
+echo $dir2"cansina"
+dcho "pip install --user requests[security] OU pip install -r requeriments.txt"
+echo $MU"python3 cansina.py -u <site_url> -p <payload_file> --persist"
+echo $link"deibit/cansina"
+}
+cipherscan()
+{
+echo -e $Install"cipherscan"
+echo $dir2"cipherscan"
+echo $MU"./cipherscan --curves -starttls xmpp jabber.ccc.de:5222"
+echo $link"mozilla/cipherscan"
+}
+wfuzz()
+{
+echo -e $Install"wfuzz"
+echo $dir2"wfuzz"
+echo "pip install wfuzz"
+echo $MU"https://github.com/xmendez/wfuzz#wfuzz---the-web-fuzzer"
+echo $link"xmendez/wfuzz"
+}
+breacher()
+{
+echo -e $Install"breacher"
+echo $dir2"breacher"
+echo $MU"python breacher -u example.com --type php --fast"
+echo $link"s0md3v/Breacher"
+}
+changeme()
+{
+echo -e $Install"changeme"
+echo $dir2"changeme"
+echo "pip install -r requirements.txt"
+echo $MU"/changeme.py --protocols ssh,ssh_key 192.168.59.0/24"
+echo $link"ztgrace/changeme"
+}
+cyberscan()
+{
+echo -e $Install"cyberscan"
+echo $dir2"cyberscan"
+echo "python CyberScan.py -v"
+echo $MU"./CyberScan -s 192.168.1.0/24 -p arp"
+echo $link"medbenali/CyberScan"
+}
+hellraiser()
+{
+echo -e $Install"hellraiser"
+echo $dir2"hellraiser"
+echo "sudo apt-get install redis-server nmap"
+echo "gem install foreman"
+echo $MU"foreman s"
+echo $MU"http://127.0.0.1:3000"
+echo $link"m0nad/HellRaiser"
+}
+vulscan()
+{
+echo -e $Install"vulscan"
+echo $dir2"vulscan"
+echo "Instalação: Nmap\scripts\vulscan\*"
+echo $MU"nmap -sV --script=vulscan/vulscan.nse www.example.com"
+echo $link"scipag/vulscan"
+}
+wig()
+{
+echo -e $Install"wig"
+echo $dir2"wig"
+echo "python3 setup.py install"
+echo $MU"python3 wig.py example.com"
+echo $link"jekyc/wig"
+}
+domain_analyzer()
+{
+echo -e $Install"domain_analyzer"
+echo $dir2"domain_analyzer"
+echo "https://github.com/eldraco/domain_analyzer#installation"
+echo $MU"domain_analyzer.py -d mil.cn -b -o -g -a -n -v google -x '-O --reason --webxml --traceroute -sS -sV -sC -PN -n -v -p 80,4443'"
+echo $link"eldraco/domain_analyzer"
+}
+paskto()
+{
+echo -e $Install"paskto"
+echo $dir2"paskto"
+echo $MU"node paskto.js -d '/tmp/CC-MAIN-2017-39-index/' -o /tmp/rest-results.csv -a  /tmp/all-urls.csv"
+echo $link"cloudtracer/paskto"
+}
+webeye()
+{
+echo -e $Install"webeye"
+echo $dir2"webeye"
+echo $MU"https://github.com/zerokeeper/WebEye#webeye"
+echo $link"zerokeeper/WebEye"
+}
+shcheck()
+{
+echo -e $Install"shcheck"
+echo $dir2"shcheck"
+echo $MU"https://github.com/meliot/shcheck#security-header-check"
+echo $link"meliot/shcheck"
+}
+sensitivefilescan()
+{
+echo -e $Install"sensitivefilescan"
+echo $dir2"sensitivefilescan"
+echo "pip install -r requirements.txt"
+echo $MU"python sensitivefiles.py 'http://www.baidu.com' -e 'php' -t 40 -d 10"
+echo $link"aipengjie/sensitivefilescan"
+}
+cangibrina()
+{
+echo -e $Install"cangibrina"
+echo $dir2"cangibrina"
+echo "pip install -r requirements.txt"
+echo $MU"python cangibrina.py -u facebook.com --search --dork 'site:facebook.com inurl:login'"
+echo $link"fnk0c/cangibrina"
+}
+cmssc4n()
+{
+echo -e $Install"cmssc4n"
+echo $dir2"cmssc4n"
+echo "pip install -r requirements.txt"
+echo $MU"cmssc4n.py [-h] [-e EXPORT] [-c CMS] -i INPUT"
+echo $link"n4xh4ck5/CMSsc4n"
+}
+whatwaf()
+{
+echo -e $Install"whatwaf"
+echo $dir2"whatwaf"
+echo "chmod +x whatwaf.py"
+echo "pip install -r requirements.txt"
+echo "./setup.sh install"
+echo $MU"./whatwaf.py --help"
+echo $link"Ekultek/WhatWaf"
+}
+gowapt()
+{
+echo -e $Install"gowapt"
+echo $dir2"gowapt"
+echo "make"
+echo "sudo make install"
+echo $MU"gowapt -u 'http://www.example.com/?vuln=FUZZ' -w wordlist/Injections/XSS.txt -f 'tags > 200'"
+echo $link"dzonerzy/goWAPT"
+}
+webdirdig()
+{
+echo -e $Install"webdirdig"
+echo $dir2"webdirdig"
+echo $MU"python webdirdig.py http://www.baidu.com"
+echo $link"blackye/webdirdig"
+}
+billcipher()
+{
+echo -e $Install"billcipher"
+echo $dir2"billcipher"
+echo "sudo apt update && sudo apt install ruby python python-pip python3 python3-pip"
+echo "sudo apt install httrack whatweb"
+echo "pip install -r requirements.txt"
+echo "pip3 install -r requirements.txt"
+echo "https://github.com/GitHackTools/BillCipher#screenshots-older-version"
+echo $MU"python3 billcipher.py"
+echo $link"GitHackTools/BillCipher"
+}
+w8fuckcdn()
+{
+echo -e $Install"w8fuckcdn"
+echo $dir2"w8fuckcdn"
+echo $MU"https://github.com/boy-hack/w8fuckcdn#w8fuckcdn"
+echo $link"boy-hack/w8fuckcdn"
+}
+w11scan()
+{
+echo -e $Install"w11scan"
+echo $dir2"w11scan"
+echo $MU"https://github.com/w-digital-scanner/w11scan#w11scan"
+echo $link"w-digital-scanner/w11scan"
+}
+dirhunt()
+{
+echo -e $Install"dirhunt"
+echo $dir2"dirhunt"
+echo "sudo pip3 install dirhunt"
+echo "https://github.com/Nekmo/dirhunt#install"
+echo $MU"./dirhunt http://website.com/"
+echo $link"Nekmo/dirhunt"
+}
+pyhawk()
+{
+echo -e $Install"pyhawk"
+echo $dir2"pyhawk"
+echo "python2 main.py"
+echo "https://github.com/MetaChar/pyHAWK#installation-instructions"
+echo $MU"python2 main.py -d <directory>"
+echo $link"MetaChar/pyHAWK"
+}
+
+##SE##
+###################
+##START SE##
+SE()
+{
+    SE=("Detecção de vulnerabilidades de Jenkins, enumeração de captura de usuário (jenkins)" 
+      "Scanner de discusão (dzscan)" 
+      "CMS Exploit Framework (cms-exploit-framework)" 
+      "Um scanner de nome abreviado do IIS (iis_shortname_scanner)" 
+      "Flash XSS Scanner (flashscanner)" 
+      "Ferramenta de Detecção e Detecção de Injeção Automática no Lado do Servidor (tplmap)" 
+      "Análise de segurança do Docker e ferramentas de hacking (dockerscan)" 
+      "Simple Wordpress Security Scanner (wpseku)" 
+      "Framework Ruby para desenvolvimento e uso de módulos que auxiliam no teste de penetração de websites e sistemas baseados em WordPress (wordpress-exploit-framework)" 
+      "Um plugin para Burp Suite Proxy para melhorar a cobertura de teste durante testes de penetração de aplicativos da Web em aplicativos J2EE (j2eescan)" 
+      "Script perl da base do scanner Struts2 Vuls (strutscan)" 
+      "Totalmente automático LFI Exploiterand Scanner suporta Reverse Shell (lfisuite)" 
+      "Analisador de vulnerabilidades do Linux baseado na API de Auditoria do Salt Open e Vulners, com notificações do Slack e integração do JIRA (salt-scanner)" 
+      "Detecção automatizada de injeção de modelo no lado do cliente para AngularJS (angularjs-csti-scanner)" 
+      "Scanners para vulnerabilidade de divulgação do nome de arquivo abreviado do IIS 8.3 (iis-shortname-scanner)" 
+      "WPScan reescrito em Python + algumas idéias WPSeku (wordpresscan)" 
+      "CMS Exploit Framework (cmspoc)" 
+      "Auto CRLF Injector (crlf-injector)" 
+      "Rastreia automaticamente a rede interna para detectar se estão vulneráveis (smbtouch-scanner)" 
+      "Ferramenta de linha de comando para verificar vulnerabilidades em resultados de pesquisa do Google (dorkbot)" 
+      "Um explorador de LFi automatizado exclusivo com shells de encadernação/reversão (lfifreak)" 
+      "Esta ferramenta pode ser usada para descobrir os parâmetros GET e POST (parameth)" 
+      "Struts2 vuls Scanner, suportado todos os vuls (struts-scan)" 
+      "Auto Scanning para SSL Vulnerabilidade, como heartbleed etc (a2sv)" 
+      "Script Python baseado em Selenium para automatizar a pesquisa de aplicativos da Web vulneráveis (dorknet)" 
+      "Ferramenta de enumeração e ataque Java RMI (barmie)" 
+      "Scanner detectando o uso de bibliotecas JavaScript com vulnerabilidades conhecidas (grunt-retire)" 
+      "O detector de vulnerabilidade para Hadoop e Spark (bda)" 
+      "Scanner de Negação de Serviço da RegEx (regex-dos)" 
+      "Verificar serviços ocultos do .onion com nmap usando Tor, proxychains e dnsmasq (docker-onion-nmap)" 
+      "Web CMS Exploit Framework (xattacker)" 
+      "Um pequeno scanner de vulnerabilidades Batch weB (bbscan)" 
+      "Verificador de vulnerabilidade de upload de arquivo e ferramenta de exploração (fuxploider)" 
+      "Uma poderosa ferramenta de aquisição de subdomínio (subover)" 
+      "Um scanner de vulnerabilidades do Wordpress (wphunter)" 
+      "Um scanner que detecta o uso de bibliotecas JavaScript com vulnerabilidades conhecidas (retire.js)" 
+      "Uma ferramenta para testar automaticamente se a função de upload pode fazer o upload do webshell (xupload)" 
+      "Detecção automática de cms e exploração (m0b-tool)" 
+      "OWASP VBScan é um Scanner de Vulnerabilidade do Black Box vBulletin (vbscan)" 
+      "Detectar sites CMS e exploração automática (badmod)" 
+      "Suíte de Detecção e Exploração CMS (cmseek)" 
+      "Verificações de verificação de segurança da AWS (scans)" 
+      "Vulnerabilidade do scanner e maSsive exploit para wp, magento, joomla e assim por diante (svscanner)" 
+      "OWASP Joomla Vulnerability Scanner Project (joomscan)" 
+      "Ferramenta projetada para ajudar a identificar aplicativos Django configurados incorretamente que estão expondo informações confidenciais (djangohunter)" "Voltar")
+  select seopt in "${SE[@]}"; do
+  if [ "$seopt" = "Detecção de vulnerabilidades de Jenkins, enumeração de captura de usuário (jenkins)" ]; then
+    jenkins
+    elif [ "$seopt" = "Scanner de discusão (dzscan)" ]; then
+        dzscan
+    elif [ "$seopt" = "CMS Exploit Framework (cms-exploit-framework)" ]; then
+        cms-exploit-framework
+    elif [ "$seopt" = "Um scanner de nome abreviado do IIS (iis_shortname_scanner)" ]; then
+        iis_shortname_scanner
+    elif [ "$seopt" = "Flash XSS Scanner (flashscanner)" ]; then
+        flashscanner
+    elif [ "$seopt" = "Ferramenta de Detecção e Detecção de Injeção Automática no Lado do Servidor (tplmap)" ]; then
+        tplmap
+    elif [ "$seopt" = "Análise de segurança do Docker e ferramentas de hacking (dockerscan)" ]; then
+        dockerscan
+    elif [ "$seopt" = "Simple Wordpress Security Scanner (wpseku)" ]; then
+        wpseku
+    elif [ "$seopt" = "Framework Ruby para desenvolvimento e uso de módulos que auxiliam no teste de penetração de websites e sistemas baseados em WordPress (wordpress-exploit-framework)" ]; then
+        wordpress-exploit-framework
+    elif [ "$seopt" = "Um plugin para Burp Suite Proxy para melhorar a cobertura de teste durante testes de penetração de aplicativos da Web em aplicativos J2EE (j2eescan)" ]; then
+        j2eescan
+    elif [ "$seopt" = "Script perl da base do scanner Struts2 Vuls (strutscan)" ]; then
+        strutscan
+    elif [ "$seopt" = "Totalmente automático LFI Exploiterand Scanner suporta Reverse Shell (lfisuite)" ]; then
+        lfisuite
+    elif [ "$seopt" = "Analisador de vulnerabilidades do Linux baseado na API de Auditoria do Salt Open e Vulners, com notificações do Slack e integração do JIRA (salt-scanner)" ]; then
+        salt-scanner
+    elif [ "$seopt" = "Detecção automatizada de injeção de modelo no lado do cliente para AngularJS (angularjs-csti-scanner)" ]; then
+        angularjs-csti-scanner
+    elif [ "$seopt" = "Scanners para vulnerabilidade de divulgação do nome de arquivo abreviado do IIS 8.3 (iis-shortname-scanner)" ]; then
+        iis-shortname-scanner
+    elif [ "$seopt" = "WPScan reescrito em Python + algumas idéias WPSeku (wordpresscan)" ]; then
+        wordpresscan
+    elif [ "$seopt" = "CMS Exploit Framework (cmspoc)" ]; then
+        cmspoc
+    elif [ "$seopt" = "Auto CRLF Injector (crlf-injector)" ]; then
+        crlf-injector
+    elif [ "$seopt" = "Rastreia automaticamente a rede interna para detectar se estão vulneráveis (smbtouch-scanner)" ]; then
+        smbtouch-scanner
+    elif [ "$seopt" = "Ferramenta de linha de comando para verificar vulnerabilidades em resultados de pesquisa do Google (dorkbot)" ]; then
+        dorkbot
+    elif [ "$seopt" = "Um explorador de LFi automatizado exclusivo com shells de encadernação/reversão (lfifreak)" ]; then
+        lfifreak
+    elif [ "$seopt" = "Esta ferramenta pode ser usada para descobrir os parâmetros GET e POST (parameth)" ]; then
+        parameth
+    elif [ "$seopt" = "Struts2 vuls Scanner, suportado todos os vuls (struts-scan)" ]; then
+        struts-scan
+    elif [ "$seopt" = "Auto Scanning para SSL Vulnerabilidade, como heartbleed etc (a2sv)" ]; then
+        a2sv
+    elif [ "$seopt" = "Script Python baseado em Selenium para automatizar a pesquisa de aplicativos da Web vulneráveis (dorknet)" ]; then
+        dorknet
+    elif [ "$seopt" = "Ferramenta de enumeração e ataque Java RMI (barmie)" ]; then
+        barmie
+    elif [ "$seopt" = "Scanner detectando o uso de bibliotecas JavaScript com vulnerabilidades conhecidas (grunt-retire)" ]; then
+        grunt-retire
+    elif [ "$seopt" = "O detector de vulnerabilidade para Hadoop e Spark (bda)" ]; then
+        bda
+    elif [ "$seopt" = "Scanner de Negação de Serviço da RegEx (regex-dos)" ]; then
+        regex-dos
+    elif [ "$seopt" = "Verificar serviços ocultos do .onion com nmap usando Tor, proxychains e dnsmasq (docker-onion-nmap)" ]; then
+        docker-onion-nmap
+    elif [ "$seopt" = "Web CMS Exploit Framework (xattacker)" ]; then
+        xattacker
+    elif [ "$seopt" = "Um pequeno scanner de vulnerabilidades Batch weB (bbscan)" ]; then
+        bbscan
+    elif [ "$seopt" = "Verificador de vulnerabilidade de upload de arquivo e ferramenta de exploração (fuxploider)" ]; then
+        fuxploider
+    elif [ "$seopt" = "Uma poderosa ferramenta de aquisição de subdomínio (subover)" ]; then
+        subover
+    elif [ "$seopt" = "Um scanner de vulnerabilidades do Wordpress (wphunter)" ]; then
+        wphunter
+    elif [ "$seopt" = "Um scanner que detecta o uso de bibliotecas JavaScript com vulnerabilidades conhecidas (retire.js)" ]; then
+        retire.js
+    elif [ "$seopt" = "Uma ferramenta para testar automaticamente se a função de upload pode fazer o upload do webshell (xupload)" ]; then
+        xupload
+    elif [ "$seopt" = "Detecção automática de cms e exploração (m0b-tool)" ]; then
+        m0b-tool
+    elif [ "$seopt" = "OWASP VBScan é um Scanner de Vulnerabilidade do Black Box vBulletin (vbscan)" ]; then
+        vbscan
+    elif [ "$seopt" = "Detectar sites CMS e exploração automática (badmod)" ]; then
+        badmod
+    elif [ "$seopt" = "Suíte de Detecção e Exploração CMS (cmseek)" ]; then
+        cmseek
+    elif [ "$seopt" = "Verificações de verificação de segurança da AWS (scans)" ]; then
+        scans
+    elif [ "$seopt" = "Vulnerabilidade do scanner e maSsive exploit para wp, magento, joomla e assim por diante (svscanner)" ]; then
+        svscanner
+    elif [ "$seopt" = "OWASP Joomla Vulnerability Scanner Project (joomscan)" ]; then
+        joomscan
+    elif [ "$seopt" = "Ferramenta projetada para ajudar a identificar aplicativos Django configurados incorretamente que estão expondo informações confidenciais (djangohunter)" ]; then
+        djangohunter
+  elif [ "$seopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SE##
+#################
+
+jenkins()
+{
+echo -e $Install"jenkins"
+echo $dir2"jenkins"
+echo $MU"python jenkins.py -u http://www.xxx.com/jenkins/"
+echo $link"blackye/Jenkins"
+}
+dzscan()
+{
+echo -e $Install"dzscan"
+echo $dir2"dzscan"
+echo "easy_install pip"
+echo "pip install gevent"
+echo $MU"python dzscan.py -u http://bbs.dzscan.org/ --gevent 20 //20"
+echo $link"code-scan/dzscan"
+}
+iis_shortname_scanner()
+{
+echo -e $Install"iis_shortname_scanner"
+echo $dir2"iis_shortname_scanner"
+echo $MU"iis_shortname_Scan.py target"
+echo $link"lijiejie/IIS_shortname_Scanner"
+}
+flashscanner()
+{
+echo -e $Install"flashscanner"
+echo $dir2"flashscanner"
+echo $MU"perl FlashScanner.pl -g 'site:test.com filetype:swfinurl:player' -p 1"
+echo $link"riusksk/FlashScanner"
+}
+tplmap()
+{
+echo -e $Install"tplmap"
+echo $dir2"tplmap"
+echo "https://github.com/epinna/tplmap#exploitation"
+echo $MU"./tplmap.py -u 'http://www.target.com/page?name=John'"
+echo $link"epinna/tplmap"
+}
+dockerscan()
+{
+echo -e $Install"dockerscan"
+echo $dir2"dockerscan"
+echo "python3.5 -m pip install -U pip"
+echo "python3.5 -m pip install dockerscan"
+echo "https://github.com/cr0hn/dockerscan#dockerscan"
+echo $MU"dockerscan -h"
+echo $link"cr0hn/dockerscan"
+}
+wpseku()
+{
+echo -e $Install"wpseku"
+echo $dir2"wpseku"
+echo "pip3 install -r requirements.txt"
+echo "https://github.com/m4ll0k/WPSeku#usage"
+echo $MU"python3 wpseku.py --url https://www.xxxxxxx.com --verbose"
+echo $link"m4ll0k/WPSeku"
+}
+wordpress-exploit-framework()
+{
+echo -e $Install"wordpress-exploit-framework"
+echo $dir2"wordpress-exploit-framework"
+echo "gem install wpxf"
+echo "sudo apt-get install build-essential patch"
+echo "sudo apt-get install ruby-dev zlib1g-dev liblzma-dev libsqlite3-dev"
+echo $MU"wpxf > use exploit/shell/symposium_shell_upload"
+echo $link"rastating/wordpress-exploit-framework"
+}
+j2eescan()
+{
+echo -e $Install"j2eescan"
+echo $dir2"j2eescan"
+echo $MU"https://github.com/ilmila/J2EEScan#j2eescan---j2ee-security-scanner-burp-suite-plugin"
+echo $link"ilmila/J2EEScan"
+}
+strutscan()
+{
+echo -e $Install"strutscan"
+echo $dir2"strutscan"
+echo $MU"perl StructScan.pl -g 'site:qq.com filetype:action' -p 1"
+echo $link"riusksk/StrutScan"
+}
+lfisuite()
+{
+echo -e $Install"lfisuite"
+echo $dir2"lfisuite"
+echo $MU"https://github.com/D35m0nd142/LFISuite#lfi-suite"
+echo $link"D35m0nd142/LFISuite"
+}
+salt-scanner()
+{
+echo -e $Install"salt-scanner"
+echo $dir2"salt-scanner"
+echo "https://github.com/0x4D31/salt-scanner#requirements"
+echo $MU"sudo ./salt-scanner.py --target-hosts 'ec2_tags:Role:webapp' --target-form grain"
+echo $link"0x4D31/salt-scanner"
+}
+angularjs-csti-scanner()
+{
+echo -e $Install"angularjs-csti-scanner"
+echo $dir2"angularjs-csti-scanner"
+echo "pip install https://github.com/tijme/angularjs-csti-scanner/archive/master.zip"
+echo $MU"acstis -d 'https://finnwea.com/some/page/?category=23'"
+echo $link"tijme/angularjs-csti-scanner"
+}
+iis-shortname-scanner()
+{
+echo -e $Install"iis-shortname-scanner"
+echo $dir2"iis-shortname-scanner"
+echo "https://github.com/irsdl/IIS-ShortName-Scanner#installation"
+echo $MU"java -jar iis_shortname_scanner.jar http://example.com/folder/"
+echo $link"irsdl/IIS-ShortName-Scanner"
+}
+wordpresscan()
+{
+echo -e $Install"wordpresscan"
+echo $dir2"wordpresscan"
+echo "https://github.com/swisskyrepo/Wordpresscan#install--launch"
+echo $MU"python main.py -u 'http://localhost/wordpress' --update --random-agent"
+echo $link"swisskyrepo/Wordpresscan"
+}
+cmspoc()
+{
+echo -e $Install"cmspoc"
+echo $dir2"cmspoc"
+echo "https://github.com/CHYbeta/cmsPoc#requirements"
+echo $MU"python cmspoc.py -u http://127.0.0.1/beecms/inex.php -t beecms -s v40_fileupload_getshell"
+echo $link"CHYbeta/cmsPoc"
+}
+crlf-injector()
+{
+echo -e $Install"crlf-injector"
+echo $dir2"crlf-injector"
+echo "https://github.com/rudSarkar/crlf-injector#requirements"
+echo "pip install requests"
+echo $MU"python crlf.py [domain_list.ext] [crlf_payload]"
+echo $link"rudSarkar/crlf-injector"
+}
+smbtouch-scanner()
+{
+echo -e $Install"smbtouch-scanner"
+echo $dir2"smbtouch-scanner"
+echo $MU"https://github.com/3gstudent/Smbtouch-Scanner#smbtouch-scanner"
+echo $link"3gstudent/Smbtouch-Scanner"
+}
+dorkbot()
+{
+echo -e $Install"dorkbot"
+echo $dir2"dorkbot"
+echo "https://github.com/utiso/dorkbot#requirements"
+echo $MU"./dorkbot.py -i google -o engine=012345678901234567891:abc12defg3h,query='filetype:php inurl:id'"
+echo $link"utiso/dorkbot"
+}
+lfifreak()
+{
+echo -e $Install"lfifreak"
+echo $dir2"lfifreak"
+echo $MU"https://github.com/OsandaMalith/LFiFreak#lfi-freak"
+echo $link"OsandaMalith/LFiFreak"
+}
+parameth()
+{
+echo -e $Install"parameth"
+echo $dir2"parameth"
+echo "https://github.com/mak-/parameth#installation"
+echo $MU"https://github.com/mak-/parameth#usage"
+echo $link"mak-/parameth"
+}
+struts-scan()
+{
+echo -e $Install"struts-scan"
+echo $dir2"struts-scan"
+echo $MU"https://github.com/Lucifer1993/struts-scan#struts-scan"
+echo $link"Lucifer1993/struts-scan"
+}
+a2sv()
+{
+echo -e $Install"a2sv"
+echo $dir2"a2sv"
+echo "pip install argparse"
+echo "pip install netaddr"
+echo "apt-get install openssl"
+echo $MU"python a2sv.py -h"
+echo $link"hahwul/a2sv"
+}
+dorknet()
+{
+echo -e $Install"dorknet"
+echo $dir2"dorknet"
+echo "sudo -H pip install -r requirements.txt"
+echo "https://github.com/NullArray/DorkNet#usage"
+echo $MU"./DorkNet.py -d inurl:show.php?id= -v"
+echo $link"NullArray/DorkNet"
+}
+barmie()
+{
+echo -e $Install"barmie"
+echo $dir2"barmie"
+echo $MU"java -jar BaRMIe.jar"
+echo $link"NickstaDB/BaRMIe"
+}
+grunt-retire()
+{
+echo -e $Install"grunt-retire"
+echo $dir2"grunt-retire"
+echo "npm install grunt-retire --save-dev"
+echo $MU"https://github.com/RetireJS/grunt-retire#scan-javascript-files-only"
+echo $link"RetireJS/grunt-retire"
+}
+bda()
+{
+echo -e $Install"bda"
+echo $dir2"bda"
+echo $MU"python main.py -h"
+echo $link"shouc/BDA"
+}
+regex-dos()
+{
+echo -e $Install"regex-dos"
+echo $dir2"regex-dos"
+echo $MU"https://github.com/jagracey/Regex-DoS#what-is-regular-expression-denial-of-service"
+echo $link"jagracey/Regex-DoS"
+}
+docker-onion-nmap()
+{
+echo -e $Install"docker-onion-nmap"
+echo $dir2"docker-onion-nmap"
+echo "https://github.com/milesrichardson/docker-onion-nmap#docker-onion-nmap"
+echo $MU"docker run --rm -it milesrichardson/onion-nmap -p 80,443 facebookcorewwwi.onion"
+echo $link"milesrichardson/docker-onion-nmap"
+}
+xattacker()
+{
+echo -e $Install"xattacker"
+echo $dir2"xattacker"
+echo "https://github.com/Moham3dRiahi/XAttacker#installation-linux-"
+echo $MU"perl XAttacker.pl -l list.txt"
+echo $link"Moham3dRiahi/XAttacker"
+}
+bbscan()
+{
+echo -e $Install"bbscan"
+echo $dir2"bbscan"
+echo "pip install -r requirements.txt"
+echo $MU"python BBScan.py  --host www.a.com www.b.com --browser"
+echo $link"lijiejie/BBScan"
+}
+fuxploider()
+{
+echo -e $Install"fuxploider"
+echo $dir2"fuxploider"
+echo "pip3 install -r requirements.txt"
+echo $MU"python3 fuxploider.py --url https://awesomeFileUploadService.com --not-regex 'wrong file type'"
+echo $link""
+}
+subover()
+{
+echo -e $Install"subover"
+echo $dir2"subover"
+echo "go get github.com/Ice3man543/SubOver"
+echo $MU"./SubOver -l subdomains.txt"
+echo $link"Ice3man543/SubOver"
+}
+wphunter()
+{
+echo -e $Install"wphunter"
+echo $dir2"wphunter"
+echo "php wphunter.php"
+echo $MU"php wphunter.php https://www.example.com"
+echo $link"Jamalc0m/wphunter"
+}
+retire.js()
+{
+echo -e $Install"retire.js"
+echo $dir2"retire.js"
+echo "npm install -g retire"
+echo "retire"
+echo $MU"https://github.com/retirejs/retire.js#gulp-task"
+echo $link"retirejs/retire.js"
+}
+m0b-tool()
+{
+echo -e $Install"m0b-tool"
+echo $dir2"m0b-tool"
+echo $MU"perl MENU.pl"
+echo $link"mobrine-mob/M0B-tool"
+}
+vbscan()
+{
+echo -e $Install"vbscan"
+echo $dir2"vbscan"
+echo $MU"./vbscan.pl http://target.com/vbulletin"
+echo $link"rezasp/vbscan"
+}
+badmod()
+{
+echo -e $Install"badmod"
+echo $dir2"badmod"
+echo "sudo apt-get install php"
+echo "sudo apt-get install php-cur"
+echo "chmod +x INSTALL"
+echo "./INSTALL"
+echo $MU"https://github.com/MrSqar-Ye/BadMod#header"
+echo $link"MrSqar-Ye/BadMod"
+}
+cmseek()
+{
+echo -e $Install"cmseek"
+echo $dir2"cmseek"
+echo "pip/pip3 install -r requirements.txt"
+echo $MU"python3 cmseek.py [OPTIONS] <Target Specification>"
+echo $link"Tuhinshubhra/CMSeeK"
+}
+scans()
+{
+echo -e $Install"scans"
+echo $dir2"scans"
+echo "https://github.com/cloudsploit/scans#installation"
+echo $MU"https://github.com/cloudsploit/scans#setup"
+echo $link"cloudsploit/scans"
+}
+svscanner()
+{
+echo -e $Install"svscanner"
+echo $dir2"svscanner"
+echo "php svscanner.php"
+echo $MU"https://github.com/radenvodka/SVScanner#svscanner---scanner-vulnerability-and-massive-exploit"
+echo $link"radenvodka/SVScanner"
+}
+joomscan()
+{
+echo -e $Install"joomscan"
+echo $dir2"joomscan"
+echo "perl joomscan.pl"
+echo $MU"perl joomscan.pl -u www.example.com"
+echo $link"rezasp/joomscan"
+}
+djangohunter()
+{
+echo -e $Install"djangohunter"
+echo $dir2"djangohunter"
+echo "pip install -r requirements.txt"
+echo $MU"python3 djangohunter.py --key {shodan}"
+echo $MU"https://github.com/6IX7ine/djangohunter#usage"
+echo $link"6IX7ine/djangohunter"
+}
+
+##SRSF##
+###################
+##START SRSF##
+SRSF()
+{
+    SRSF=("Testando e descobrindo falhas em sua própria rede (fern-wifi-cracker)" 
+      "Framework pentest de rede multiuso (pythem)" 
+      "Framework para Rogue Wi-Fi Access Point Attack (wifi-pumpkin)" 
+      "Uma suíte de ferramentas escritas em Python para auditoria sem fio e testes de segurança (boopsuite)" 
+      "Encontre automaticamente os usuários de WLAN mais ativos, informe o código, bloqueie o Wi-Fi e espie os usuários de Wi-Fi (lans.py)" 
+      "Pesquisa por rastreamentos de wi-fi-abacaxi e calcula a pontuação de segurança da rede sem fio (pifinger)" 
+      "Uma re-gravação completa da Ferramenta de Ataque Sem Fio Automatizada da Wifite (wifite2)" 
+      "Voltar" )
+  select srsfopt in "${SRSF[@]}"; do
+  if [ "$srsfopt" = "Testando e descobrindo falhas em sua própria rede (fern-wifi-cracker)" ]; then
+    fern-wifi-cracker
+    elif [ "$srsfopt" = "Framework pentest de rede multiuso (pythem)" ]; then
+        pythem
+    elif [ "$srsfopt" = "Framework para Rogue Wi-Fi Access Point Attack (wifi-pumpkin)" ]; then
+        wifi-pumpkin
+    elif [ "$srsfopt" = "Uma suíte de ferramentas escritas em Python para auditoria sem fio e testes de segurança (boopsuite)" ]; then
+        boopsuite
+    elif [ "$srsfopt" = "Encontre automaticamente os usuários de WLAN mais ativos, informe o código, bloqueie o Wi-Fi e espie os usuários de Wi-Fi (lans.py)" ]; then
+        lans.py
+    elif [ "$srsfopt" = "Pesquisa por rastreamentos de wi-fi-abacaxi e calcula a pontuação de segurança da rede sem fio (pifinger)" ]; then
+        pifinger
+    elif [ "$srsfopt" = "Uma re-gravação completa da Ferramenta de Ataque Sem Fio Automatizada da Wifite (wifite2)" ]; then
+        wifite2
+  elif [ "$srsfopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SRSF##
+#################
+
+fern-wifi-cracker()
+{
+echo -e $Install"fern-wifi-cracker"
+echo $dir2"fern-wifi-cracker"
+echo $MU"https://github.com/savio-code/fern-wifi-cracker/#create-portable-static-executables-from-dynamic-executables-that-will-run-on-every-distribution-of-linux-without-the-need-of-recompiling-click-here-for-more-information"
+echo $link"savio-code/fern-wifi-cracker/"
+}
+pythem()
+{
+echo -e $Install"pythem"
+echo $dir2"pythem"
+echo "https://github.com/m4n3dw0lf/PytheM#linux-installation"
+echo $MU"sudo pythem"
+echo $link"m4n3dw0lf/PytheM"
+}
+wifi-pumpkin()
+{
+echo -e $Install"wifi-pumpkin"
+echo $dir2"wifi-pumpkin"
+echo "https://github.com/P0cL4bs/WiFi-Pumpkin#installation"
+echo $MU"wifi-pumpkin"
+echo $link"P0cL4bs/WiFi-Pumpkin"
+}
+boopsuite()
+{
+echo -e $Install"boopsuite"
+echo $dir2"boopsuite"
+echo "pip3 install boop"
+echo $MU"https://github.com/MisterBianco/BoopSuite#the-suite-mimics-flask"
+echo $link"MisterBianco/BoopSuite"
+}
+lans.py()
+{
+echo -e $Install"lans.py"
+echo $dir2"lans.py"
+echo "https://github.com/DanMcInerney/LANs.py#lanspy"
+echo $MU"python LANs.py -u -p -d -ip 192.168.0.10"
+echo $link"DanMcInerney/LANs.py"
+}
+pifinger()
+{
+echo -e $Install"pifinger"
+echo $dir2"pifinger"
+echo "pip install -r requirements.txt"
+echo $MU"python pifinger.py"
+echo $link"WiPi-Hunter/PiFinger"
+}
+wifite2()
+{
+echo -e $Install"wifite2"
+echo $dir2"wifite2"
+echo "sudo python setup.py install"
+echo $MU"https://github.com/derv82/wifite2#screenshots"
+echo $link"derv82/wifite2"
+}
+
+##SRRL##
+###################
+##START SRRL##
+SRRL()
+{
+    SRRL=("Verificador de rede local baseado no BBScan via.lijiejie (lnscan)" 
+      "Ferramenta para Varredura de Rede, Homem no Meio, Engenharia Reversa de Protocolo e Fuzzing (nili)" 
+      "Javascript PoC que varre sua rede local quando você abre uma página da Web (localnetworkscanner)" "Voltar" )
+  select srrlopt in "${SRRL[@]}"; do
+  if [ "$srrlopt" = "Verificador de rede local baseado no BBScan via.lijiejie (lnscan)" ]; then
+    lnscan
+    elif [ "$srrlopt" = "Ferramenta para Varredura de Rede, Homem no Meio, Engenharia Reversa de Protocolo e Fuzzing (nili)" ]; then
+        nili
+    elif [ "$srrlopt" = "Javascript PoC que varre sua rede local quando você abre uma página da Web (localnetworkscanner)" ]; then
+        localnetworkscanner
+  elif [ "$srrlopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SRRL##
+#################
+
+lnscan()
+{
+echo -e $Install"lnscan"
+echo $dir2"lnscan"
+echo "https://github.com/sowish/LNScan#require"
+echo $MU"https://github.com/sowish/LNScan#usage"
+echo $link"sowish/LNScan"
+}
+nili()
+{
+echo -e $Install"nili"
+echo $dir2"nili"
+echo "https://github.com/niloofarkheirkhah/nili#installing"
+echo $MU"https://github.com/niloofarkheirkhah/nili#prerequisites"
+echo $link"niloofarkheirkhah/nili"
+}
+localnetworkscanner()
+{
+echo -e $Install"localnetworkscanner"
+echo $dir2"localnetworkscanner"
+echo $link"SkyLined/LocalNetworkScanner"
+}
+
+##FRCS##
+###################
+##START FRCS##
+FRCS()
+{
+    FRCS=("Um sistema de análise de código estático que automatiza a detecção de vulnerabilidades e problemas de segurança (cobra)" 
+      "Uma ferramenta que pode verificar automaticamente as vulnerabilidades do php usando métodos de análise estática ()" 
+      "Uma ferramenta de rastreamento e solução de problemas para scripts PHP (phptrace)" 
+      "Um scanner de código de segurança estático para aplicativos Node.js (nodejsscan)" 
+      "Um scanner de código de segurança estático para aplicativos python (pyvulhunter)" 
+      "Um scanner de vulnerabilidade de segurança de análise estática para aplicativos Ruby on Rails (brakeman)" 
+      "Uma ferramenta de análise estática para detectar vulnerabilidades de segurança em aplicativos da Web em Python (pyt)" 
+      "Ferramenta PHP para escanear código ADOdb para injeções SQL (php-reaper)" 
+      "Um analisador de código estático do PHP para possíveis vulnerabilidades (phortress)" "Voltar" )
+  select frcsopt in "${FRCS[@]}"; do
+  if [ "$frcsopt" = "Um sistema de análise de código estático que automatiza a detecção de vulnerabilidades e problemas de segurança (cobra)" ]; then
+    cobra
+    elif [ "$frcsopt" = "Uma ferramenta que pode verificar automaticamente as vulnerabilidades do php usando métodos de análise estática (phpvulhunter)" ]; then
+        phpvulhunter
+    elif [ "$frcsopt" = "Uma ferramenta de rastreamento e solução de problemas para scripts PHP (phptrace)" ]; then
+        phptrace
+    elif [ "$frcsopt" = "Um scanner de código de segurança estático para aplicativos Node.js (nodejsscan)" ]; then
+        nodejsscan
+    elif [ "$frcsopt" = "Um scanner de código de segurança estático para aplicativos python (pyvulhunter)" ]; then
+        pyvulhunter
+    elif [ "$frcsopt" = "Um scanner de vulnerabilidade de segurança de análise estática para aplicativos Ruby on Rails (brakeman)" ]; then
+        brakeman
+    elif [ "$frcsopt" = "Uma ferramenta de análise estática para detectar vulnerabilidades de segurança em aplicativos da Web em Python (pyt)" ]; then
+        pyt
+    elif [ "$frcsopt" = "Ferramenta PHP para escanear código ADOdb para injeções SQL (php-reaper)" ]; then
+        php-reaper
+    elif [ "$frcsopt" = "Um analisador de código estático do PHP para possíveis vulnerabilidades (phortress)" ]; then
+        phortress
+  elif [ "$frcsopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END FRCS##
+#################
+
+cobra()
+{
+echo -e $Install"cobra"
+echo $dir2"cobra"
+echo $MU"https://github.com/WhaleShark-Team/cobra#cobra"
+echo $link"WhaleShark-Team/cobra"
+}
+phpvulhunter()
+{
+echo -e $Install"phpvulhunter"
+echo $dir2"phpvulhunter"
+echo $MU"https://github.com/OneSourceCat/phpvulhunter#phpvulhunter"
+echo $link"OneSourceCat/phpvulhunter"
+}
+phptrace()
+{
+echo -e $Install"phptrace"
+echo $dir2"phptrace"
+echo "https://github.com/Qihoo360/phptrace#install-from-source"
+echo $MU"https://github.com/Qihoo360/phptrace#usage"
+echo $link"Qihoo360/phptrace"
+}
+nodejsscan()
+{
+echo -e $Install"nodejsscan"
+echo $dir2"nodejsscan"
+echo $MU"https://github.com/ajinabraham/NodeJsScan#configure--run-nodejsscan"
+echo $link"ajinabraham/NodeJsScan"
+}
+pyvulhunter()
+{
+echo -e $Install"pyvulhunter"
+echo $dir2"pyvulhunter"
+echo $MU"https://github.com/shengqi158/pyvulhunter#1python%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%91"
+echo $link"shengqi158/pyvulhunter"
+}
+brakeman()
+{
+echo -e $Install"brakeman"
+echo $dir2"brakeman"
+echo "gem install brakeman"
+echo $MU"https://github.com/presidentbeef/brakeman#usage"
+echo $link"presidentbeef/brakeman"
+}
+pyt()
+{
+echo -e $Install"pyt"
+echo $dir2"pyt"
+echo "https://github.com/python-security/pyt#install"
+echo $MU"https://github.com/python-security/pyt#usage"
+echo $link"python-security/pyt"
+}
+php-reaper()
+{
+echo -e $Install"php-reaper"
+echo $dir2"php-reaper"
+echo "https://github.com/emanuil/php-reaper#examples"
+echo $MU"https://github.com/emanuil/php-reaper#usage"
+echo $link"emanuil/php-reaper"
+}
+phortress()
+{
+echo -e $Install"phortress"
+echo $dir2"phortress"
+echo $MU"https://github.com/lowjoel/phortress#setting-up"
+echo $link"lowjoel/phortress"
+}
+
+##SDMEDV##
+###################
+##START SDMEDV##
+SDMEDV()
+{
+    SDMEDV=("Teste de penetração colaborativo e plataforma de gerenciamento de vulnerabilidades (faraday)" 
+      "Scanner geral automático (azscanner)" 
+      "Estrutura de varredura de vulnerabilidade da Web distribuída (lalascan)" 
+      "Scanner de vulnerabilidade da Web distribuído e plug-in (bkscanner)" 
+      "Scanner de vulnerabilidades passivo (gourdscanv2)" 
+      "Realização do verificador de vulnerabilidades da Web com base em http Proxy (passive_scan)" 
+      "Automated Pentest Recon Scanner (sn1per)" 
+      "Teste de penetração direcional totalmente automatizado (pentester_fully-automatic-scanner)" 
+      "Uma estrutura automatizada de testes de penetração ()" 
+      "Framework de simultaneidade de plug-ins de teste de penetração (poc-t)" 
+      "Scanner em Python3.5 para SQLi/XSS/LFI/RFI e outros Vulns (v3n0m-scanner)" 
+      "Vários scanners vuls suportam interface Web (leakscan)" 
+      "Uma estrutura automatizada de testes de penetração (anyscan)" 
+      "Uma ferramenta All In One para coleta de informações, verificação e rastreamento de vulnerabilidades de SQL. Codificadas em PHP (red_hawk)" 
+      "Framework de Scanner de Segurança de Aplicativos da Web (arachni)" 
+      "Exploit Pack - framework de testes de penetração GPLv3 (exploitpack)" 
+      "Outra varredura de vulnerabilidades da Web, esta extensão funciona no Chrome e no Opera (damnwebscanner)" 
+      "Analisador de vulnerabilidades da Web escrito em python, com suporte a várias vulnerabilidades da Web verificadas (tulpar)" 
+      "Uma ferramenta de verificação de segurança de aplicativos da Web, projetada para encontrar vários arquivos, configurações e configurações incorretas e inseguras (spaghetti)" 
+      "Uma ferramenta de teste de penetração automatizada, esta ferramenta fará a auditoria de todos os métodos de teste de segurança padrão para você (yuki-chan-the-auto-pentest)" 
+      "Script ruby ​​que pesquisa aplicativos da Web de terceiros vulneráveis ​​e exploráveis ​​em uma rede (yasuo)" 
+      "Kit de ferramentas de ataque do servidor de aplicativos (clusterd)" 
+      "Estrutura de varredura de vulnerabilidade de código aberto e distribuído na web (pocscan)" 
+      "Estrutura de varredura de vulnerabilidade da Web distribuída (osprey)" 
+      "Uma estrutura de scanner de vulnerabilidades da web (hammer)" 
+      "Framework Framework de verificador de vulnerabilidades da Web baseado em python3 (angelsword)" 
+      "Uma das ferramentas de segurança gratuitas mais populares do mundo e ativamente mantida por centenas de voluntários internacionais (zaproxy)" 
+      "O Nikto é uma ferramenta de avaliação de servidor da Web. Ele foi projetado para encontrar vários arquivos, configurações e programas padrão e inseguros em qualquer tipo de servidor da Web (nikto)" 
+      "Striker é um scanner ofensivo de informações e vulnerabilidades (striker)" 
+      "Escrito em PHP e pode ser usado para testar aplicações web remotas ou locais para vulnerabilidades de segurança (webvulscan)" 
+      "Ferramenta de auxílio a testes de penetração e estrutura de exploração (owasp-mth3l3m3nt-framework)" 
+      "Um scanner de segurança da Web de código aberto baseado em estrutura de varredura passiva de código reduzido (luna)" 
+      "Uma estrutura de teste de penetração incluindo coleta de informações, teste sem fio, Web Hacking e assim por diante (fsociety)" 
+      "Uma estrutura de scanner de vulnerabilidades da web, executando com mais de 1200 plugins (w9scan)" 
+      "Ferramenta de Avaliação de Segurança do Serviço da Web, fornece um aplicativo .exe simples para usar com base no sistema operacional Windows (wssat)" 
+      "Uma estrutura pentest extensa e simultânea em Go (assassingo)" 
+      "Scanner de vulnerabilidades de rede baseado no Flask (insectsawake)" 
+      "Estrutura de auditoria de aplicativos da Web, como metasploit (galileo)" 
+      "Web Application Scanner (optiva-framework)" 
+      "O framework ofensivo de teste de penetração de aplicativos da web (tidos-framework)" "Voltar" )
+  select sdmedvopt in "${SDMEDV[@]}"; do
+  if [ "$sdmedvopt" = "Teste de penetração colaborativo e plataforma de gerenciamento de vulnerabilidades (faraday)" ]; then
+    faraday
+    elif [ "$sdmedvopt" = "Scanner geral automático (azscanner)" ]; then
+        azscanner
+    elif [ "$sdmedvopt" = "Estrutura de varredura de vulnerabilidade da Web distribuída (lalascan)" ]; then
+        lalascan
+    elif [ "$sdmedvopt" = "Scanner de vulnerabilidade da Web distribuído e plug-in (bkscanner)" ]; then
+        bkscanner
+    elif [ "$sdmedvopt" = "Scanner de vulnerabilidades passivo (gourdscanv2)" ]; then
+        gourdscanv2
+    elif [ "$sdmedvopt" = "Realização do verificador de vulnerabilidades da Web com base em http Proxy (passive_scan)" ]; then
+        passive_scan
+    elif [ "$sdmedvopt" = "Automated Pentest Recon Scanner (sn1per)" ]; then
+        sn1per
+    elif [ "$sdmedvopt" = "Teste de penetração direcional totalmente automatizado (pentester_fully-automatic-scanner)" ]; then
+        pentester_fully-automatic-scanner
+    elif [ "$sdmedvopt" = "Framework de simultaneidade de plug-ins de teste de penetração (poc-t)" ]; then
+        poc-t
+    elif [ "$sdmedvopt" = "Scanner em Python3.5 para SQLi/XSS/LFI/RFI e outros Vulns (v3n0m-scanner)" ]; then
+        v3n0m-scanner
+    elif [ "$sdmedvopt" = "Vários scanners vuls suportam interface Web (leakscan)" ]; then
+        leakscan
+    elif [ "$sdmedvopt" = "Uma estrutura automatizada de testes de penetração (anyscan)" ]; then
+        anyscan
+    elif [ "$sdmedvopt" = "Uma ferramenta All In One para coleta de informações, verificação e rastreamento de vulnerabilidades de SQL. Codificadas em PHP (red_hawk)" ]; then
+        red_hawk
+    elif [ "$sdmedvopt" = "Framework de Scanner de Segurança de Aplicativos da Web (arachni)" ]; then
+        arachni
+    elif [ "$sdmedvopt" = "Exploit Pack - framework de testes de penetração GPLv3 (exploitpack)" ]; then
+        exploitpack
+    elif [ "$sdmedvopt" = "Outra varredura de vulnerabilidades da Web, esta extensão funciona no Chrome e no Opera (damnwebscanner)" ]; then
+        damnwebscanner
+    elif [ "$sdmedvopt" = "Analisador de vulnerabilidades da Web escrito em python, com suporte a várias vulnerabilidades da Web verificadas (tulpar)" ]; then
+        tulpar
+    elif [ "$sdmedvopt" = "Uma ferramenta de verificação de segurança de aplicativos da Web, projetada para encontrar vários arquivos, configurações e configurações incorretas e inseguras (spaghetti)" ]; then
+        spaghetti
+    elif [ "$sdmedvopt" = "Uma ferramenta de teste de penetração automatizada, esta ferramenta fará a auditoria de todos os métodos de teste de segurança padrão para você (yuki-chan-the-auto-pentest)" ]; then
+        yuki-chan-the-auto-pentest
+    elif [ "$sdmedvopt" = "Script ruby ​​que pesquisa aplicativos da Web de terceiros vulneráveis ​​e exploráveis ​​em uma rede (yasuo)" ]; then
+        yasuo
+    elif [ "$sdmedvopt" = "Kit de ferramentas de ataque do servidor de aplicativos (clusterd)" ]; then
+        clusterd
+    elif [ "$sdmedvopt" = "Estrutura de varredura de vulnerabilidade de código aberto e distribuído na web (pocscan)" ]; then
+        pocscan
+    elif [ "$sdmedvopt" = "Estrutura de varredura de vulnerabilidade da Web distribuída (osprey)" ]; then
+        osprey
+    elif [ "$sdmedvopt" = "Uma estrutura de scanner de vulnerabilidades da web (hammer)" ]; then
+        hammer
+    elif [ "$sdmedvopt" = "Framework Framework de verificador de vulnerabilidades da Web baseado em python3 (angelsword)" ]; then
+        angelsword
+    elif [ "$sdmedvopt" = "Uma das ferramentas de segurança gratuitas mais populares do mundo e ativamente mantida por centenas de voluntários internacionais (zaproxy)" ]; then
+        zaproxy
+    elif [ "$sdmedvopt" = "O Nikto é uma ferramenta de avaliação de servidor da Web. Ele foi projetado para encontrar vários arquivos, configurações e programas padrão e inseguros em qualquer tipo de servidor da Web (nikto)" ]; then
+        nikto
+    elif [ "$sdmedvopt" = "Striker é um scanner ofensivo de informações e vulnerabilidades (striker)" ]; then
+        striker
+    elif [ "$sdmedvopt" = "Escrito em PHP e pode ser usado para testar aplicações web remotas ou locais para vulnerabilidades de segurança (webvulscan)" ]; then
+        webvulscan
+    elif [ "$sdmedvopt" = "Ferramenta de auxílio a testes de penetração e estrutura de exploração (owasp-mth3l3m3nt-framework)" ]; then
+        owasp-mth3l3m3nt-framework
+    elif [ "$sdmedvopt" = "Um scanner de segurança da Web de código aberto baseado em estrutura de varredura passiva de código reduzido (luna)" ]; then
+        luna
+    elif [ "$sdmedvopt" = "Uma estrutura de teste de penetração incluindo coleta de informações, teste sem fio, Web Hacking e assim por diante (fsociety)" ]; then
+        fsociety
+    elif [ "$sdmedvopt" = "Uma estrutura de scanner de vulnerabilidades da web, executando com mais de 1200 plugins (w9scan)" ]; then
+        w9scan
+    elif [ "$sdmedvopt" = "Ferramenta de Avaliação de Segurança do Serviço da Web, fornece um aplicativo .exe simples para usar com base no sistema operacional Windows (wssat)" ]; then
+        wssat
+    elif [ "$sdmedvopt" = "Uma estrutura pentest extensa e simultânea em Go (assassingo)" ]; then
+        assassingo
+    elif [ "$sdmedvopt" = "Scanner de vulnerabilidades de rede baseado no Flask (insectsawake)" ]; then
+        insectsawake
+    elif [ "$sdmedvopt" = "Estrutura de auditoria de aplicativos da Web, como metasploit (galileo)" ]; then
+        galileo
+    elif [ "$sdmedvopt" = "Web Application Scanner (optiva-framework)" ]; then
+        optiva-framework
+    elif [ "$sdmedvopt" = "O framework ofensivo de teste de penetração de aplicativos da web (tidos-framework)" ]; then
+        tidos-framework
+  elif [ "$sdmedvopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo  "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END SDMEDV##
+#################
+
+faraday()
+{
+echo -e $Install"faraday"
+echo $dir2"faraday"
+echo "Servidor: https://github.com/infobyte/faraday/wiki/Installation-Community#faraday-server-commu"
+echo "Cliente: https://github.com/infobyte/faraday/wiki/Installation-Community#faraday-client-commu"
+echo $MU"https://github.com/infobyte/faraday#about"
+echo $link"infobyte/faraday"
+}
+azscanner()
+{
+echo -e $Install"azscanner"
+echo $dir2"azscanner"
+echo $link"az0ne/AZScanner"
+}
+lalascan()
+{
+echo -e $Install"lalascan"
+echo $dir2"lalascan"
+echo $MU"https://github.com/blackye/lalascan#basic-usage"
+echo $link"blackye/lalascan"
+}
+bkscanner()
+{
+echo -e $Install"bkscanner"
+echo $dir2"bkscanner"
+echo $link"blackye/BkScanner"
+}
+gourdscanv2()
+{
+echo -e $Install"gourdscanv2"
+echo $dir2"gourdscanv2"
+echo "https://github.com/ysrc/GourdScanV2#linux"
+echo $MU"https://github.com/ysrc/GourdScanV2#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"
+echo $link"ysrc/GourdScanV2"
+}
+passive_scan()
+{
+echo -e $Install"passive_scan"
+echo $dir2"passive_scan"
+echo $MU"https://github.com/netxfly/passive_scan#%E6%A6%82%E8%BF%B0"
+echo $link"netxfly/passive_scan#概述"
+}
+sn1per()
+{
+echo -e $Install"sn1per"
+echo $dir2"sn1per"
+echo $MU"https://github.com/1N3/Sn1per#sn1per-professional-features"
+echo $link"1N3/Sn1per"
+}
+pentester_fully-automatic-scanner()
+{
+echo -e $Install"pentester_fully-automatic-scanner"
+echo $dir2"pentester_fully-automatic-scanner"
+echo "https://github.com/RASSec/pentestEr_Fully-automatic-scanner#%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D"
+echo $MU"python main.py -d cert.org.cn"
+echo $link"RASSec/pentestEr_Fully-automatic-scanner"
+}
+poc-t()
+{
+echo -e $Install"poc-t"
+echo $dir2"poc-t"
+echo $MU"https://github.com/Xyntax/POC-T#poc-t-pentest-over-concurrent-toolkit"
+echo $link"Xyntax/POC-T"
+}
+v3n0m-scanner()
+{
+echo -e $Install"v3n0m-scanner"
+echo $dir2"v3n0m-scanner"
+echo "https://github.com/v3n0m-Scanner/V3n0M-Scanner#install-note"
+echo $MU"https://github.com/v3n0m-Scanner/V3n0M-Scanner#very-useful-for-executing"
+echo $link"v3n0m-Scanner/V3n0M-Scanner"
+}
+leakscan()
+{
+echo -e $Install"leakscan"
+echo $dir2"leakscan"
+echo $MU"https://github.com/Skycrab/leakScan#leakscan"
+echo $link"Skycrab/leakScan"
+}
+anyscan()
+{
+echo -e $Install"anyscan"
+echo $dir2"anyscan"
+echo "https://github.com/zhangzhenfeng/AnyScan#%E4%BE%9D%E8%B5%96%E8%BD%AF%E4%BB%B6"
+echo $MU"https://github.com/zhangzhenfeng/AnyScan#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"
+echo $link"zhangzhenfeng/AnyScan"
+}
+red_hawk()
+{
+echo -e $Install"red_hawk"
+echo $dir2"red_hawk"
+echo "https://github.com/Tuhinshubhra/RED_HAWK#installation"
+echo $MU"https://github.com/Tuhinshubhra/RED_HAWK#usage"
+echo $link"Tuhinshubhra/RED_HAWK"
+}
+arachni()
+{
+echo -e $Install"arachni"
+echo $dir2"arachni"
+echo "https://github.com/Arachni/arachni#installation"
+echo $MU"https://github.com/Arachni/arachni#usage"
+echo $link"Arachni/arachni"
+}
+exploitpack()
+{
+echo -e $Install"exploitpack"
+echo $dir2"exploitpack"
+echo $link"juansacco/exploitpack"
+}
+damnwebscanner()
+{
+echo -e $Install"damnwebscanner"
+echo $dir2"damnwebscanner"
+echo "https://github.com/swisskyrepo/DamnWebScanner#install"
+echo $MU"https://github.com/swisskyrepo/DamnWebScanner#debugging"
+echo $link"swisskyrepo/DamnWebScanner"
+}
+tulpar()
+{
+echo -e $Install"tulpar"
+echo $dir2"tulpar"
+echo "pip install -r requirements"
+echo $MU"python tulpar.py action web_URL"
+echo $link"tulpar/tulpar"
+}
+spaghetti()
+{
+echo -e $Install"spaghetti"
+echo $dir2"spaghetti"
+echo "https://github.com/m4ll0k/WAScan#installation"
+echo $MU"https://github.com/m4ll0k/WAScan#usage"
+echo $link"m4ll0k/WAScan"
+}
+yuki-chan-the-auto-pentest()
+{
+echo -e $Install"yuki-chan-the-auto-pentest"
+echo $dir2"yuki-chan-the-auto-pentest"
+echo "https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest#install-without-git-clone-command-from-your-terminal"
+echo $MU"https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest#screenshoot-preview"
+echo $link"Yukinoshita47/Yuki-Chan-The-Auto-Pentest"
+}
+yasuo()
+{
+echo -e $Install"yasuo"
+echo $dir2"yasuo"
+echo "https://github.com/0xsauby/yasuo#setup--install"
+echo $MU"https://github.com/0xsauby/yasuo#examples"
+echo $link"0xsauby/yasuo"
+}
+clusterd()
+{
+echo -e $Install"clusterd"
+echo $dir2"clusterd"
+echo "https://github.com/hatRiot/clusterd#requirements"
+echo $MU"https://github.com/hatRiot/clusterd#examples--usage"
+echo $link"hatRiot/clusterd"
+}
+pocscan()
+{
+echo -e $Install"pocscan"
+echo $dir2"pocscan"
+echo $MU"https://github.com/erevus-cn/pocscan#installation"
+echo $link"erevus-cn/pocscan"
+}
+osprey()
+{
+echo -e $Install"osprey"
+echo $dir2"osprey"
+echo "https://github.com/TophantTechnology/osprey#%E5%AE%89%E8%A3%85"
+echo $MU"https://github.com/TophantTechnology/osprey#%E4%BD%BF%E7%94%A8"
+echo $link"TophantTechnology/osprey"
+}
+hammer()
+{
+echo -e $Install"hammer"
+echo $dir2"hammer"
+echo "https://github.com/yangbh/Hammer#require"
+echo "https://github.com/yangbh/Hammer#install"
+echo $MU"https://github.com/yangbh/Hammer#basic-usage"
+echo $link"yangbh/Hammer"
+}
+angelsword()
+{
+echo -e $Install"angelsword"
+echo $dir2"angelsword"
+echo "pip install -r requirements"
+echo $MU"https://github.com/Lucifer1993/AngelSword#angelsword"
+echo $link"Lucifer1993/AngelSword"
+}
+zaproxy()
+{
+echo -e $Install"zaproxy"
+echo $dir2"zaproxy"
+echo $MU"https://github.com/zaproxy/zaproxy#-owasp-zap"
+echo $link"zaproxy/zaproxy"
+}
+nikto()
+{
+echo -e $Install"nikto"
+echo $dir2"nikto"
+echo $MU"https://github.com/sullo/nikto#nikto"
+echo $link"sullo/nikto"
+}
+striker()
+{
+echo -e $Install"striker"
+echo $dir2"striker"
+echo "https://github.com/s0md3v/Striker#install"
+echo $MU"https://github.com/s0md3v/Striker#screenshots"
+echo $link"s0md3v/Striker"
+}
+webvulscan()
+{
+echo -e $Install"webvulscan"
+echo $dir2"webvulscan"
+echo "https://github.com/dermotblair/webvulscan#installation"
+echo $MU"https://github.com/dermotblair/webvulscan#synopsis"
+echo $link"dermotblair/webvulscan"
+}
+owasp-mth3l3m3nt-framework()
+{
+echo -e $Install"owasp-mth3l3m3nt-framework"
+echo $dir2"owasp-mth3l3m3nt-framework"
+echo $MU"https://www.youtube.com/playlist?list=PL8peOGsl5TC4WscgWaNMx0xJlS6X2QJI0"
+echo $link"alienwithin/OWASP-mth3l3m3nt-framework"
+}
+luna()
+{
+echo -e $Install"luna"
+echo $dir2"luna"
+echo "https://github.com/toyakula/luna#installation"
+echo $MU"https://github.com/toyakula/luna#usage"
+echo $link"toyakula/luna"
+}
+fsociety()
+{
+echo -e $Install"fsociety"
+echo $dir2"fsociety"
+echo "https://github.com/Manisso/fsociety#installation"
+echo $MU"https://github.com/Manisso/fsociety#screenshots"
+echo $link"Manisso/fsociety"
+}
+w9scan()
+{
+echo -e $Install"w9scan"
+echo $dir2"w9scan"
+echo "https://github.com/w-digital-scanner/w9scan#%E7%9B%AE%E6%A0%87"
+echo $MU"https://github.com/w-digital-scanner/w9scan#useage"
+echo $link"w-digital-scanner/w9scan"
+}
+wssat()
+{
+echo -e $Install"wssat"
+echo $dir2"wssat"
+echo "https://github.com/YalcinYolalan/WSSAT/wiki/Installation"
+echo $MU"https://github.com/YalcinYolalan/WSSAT/wiki/Usage"
+echo $link"YalcinYolalan/WSSAT"
+}
+assassingo()
+{
+echo -e $Install"assassingo"
+echo $dir2"assassingo"
+echo "https://github.com/AmyangXYZ/AssassinGo#installation"
+echo $MU"https://github.com/AmyangXYZ/AssassinGo#demo"
+echo $link"AmyangXYZ/AssassinGo"
+}
+insectsawake()
+{
+echo -e $Install"insectsawake"
+echo $dir2"insectsawake"
+echo $MU"https://github.com/jeffzh3ng/InsectsAwake#%E6%83%8A%E8%9B%B0-%E6%9C%AC%E9%A1%B9%E7%9B%AE%E4%B8%8D%E5%86%8D%E7%BB%B4%E6%8A%A4%E8%AF%B7%E5%85%B3%E6%B3%A820%E7%89%88"
+echo $link"jeffzh3ng/InsectsAwake"
+}
+galileo()
+{
+echo -e $Install"galileo"
+echo $dir2"galileo"
+echo "https://github.com/m4ll0k/Galileo#installation"
+echo $MU"https://github.com/m4ll0k/Galileo#usage"
+echo $link"m4ll0k/Galileo"
+}
+optiva-framework()
+{
+echo -e $Install"optiva-framework"
+echo $dir2"optiva-framework"
+echo "https://github.com/joker25000/Optiva-Framework#%EF%B8%8F-installation-linux-"
+echo $MU"https://github.com/joker25000/Optiva-Framework#%EF%B8%8F-screenshot-"
+echo $link"joker25000/Optiva-Framework"
+}
+tidos-framework()
+{
+echo -e $Install"tidos-framework"
+echo $dir2"tidos-framework"
+echo "https://github.com/0xInfection/TIDoS-Framework#installation--"
+echo $MU"https://github.com/0xInfection/TIDoS-Framework#getting-started--"
+echo $link"0xInfection/TIDoS-Framework"
+}
+
+##AFERCA##
+###################
+##START AFERCA##
+AFERCA()
+{
+    AFERCA=("Simple IOC e Incident Response Scanner (loki)" "Voltar" )
+  select afercaopt in "${AFERCA[@]}"; do
+  if [ "$afercaopt" = "Simple IOC e Incident Response Scanner (loki)" ]; then
+    loki
+  elif [ "$sdmedvopt" = "Voltar" ]; then
+        toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END AFERCA##
+#################
+
+loki()
+{
+echo -e $Install"loki"
+echo $dir2"loki"
+echo $MU"https://github.com/Neo23x0/Loki#usage"
+echo $link"Neo23x0/Loki"
+}
+
+##AFSERCIRG##
+###################
+##START AFSERCIRG##
+AFSERCIRG()
+{
+    AFSERCIRG=("Ferramentas de enumeração do ICS da Digital Bond (nse)"
+    "Estrutura de avaliação de segurança Sdn (delta)" "Voltar" )
+  select afsercirgopt in "${AFSERCIRG[@]}"; do
+  if [ "$afsercirgopt" = "Ferramentas de enumeração do ICS da Digital Bond (nse)" ]; then
+    nse
+    elif [ "$afsercirgopt" = "Estrutura de avaliação de segurança Sdn (delta)" ]; then
+          delta
+    elif [ "$afsercirgopt" = "Voltar" ]; then
+          toolxmenu
+  else
+      echo "Que diacho foi isso que tu digitou? Existe não!!"
+  fi
+  done
+}
+##END AFSERCIRG##
+#################
+
+nse()
+{
+echo -e $Install"nse"
+echo $dir2"nse"
+echo $link"w3h/icsmaster/tree/master/nse"
+}
+delta()
+{
+echo -e $Install"delta"
+echo $dir2"delta"
+echo $MU"https://github.com/OpenNetworkingFoundation/DELTA#delta-sdn-security-evaluation-framework"
+echo $link"OpenNetworkingFoundation/DELTA"
+}
+
+##Bem Vindo##
+#########################
+##Inicio Bem Vindo##
+clear && echo ""
+echo "'########::'#######:::'#######::'##:::::::'##::::'##:::::::::::::::::::'###::::'##::::'##:'########:::'#######::"
+echo "... ##..::'##.... ##:'##.... ##: ##:::::::. ##::'##:::::::::::::::::::'## ##:::. ##::'##:: ##.... ##:'##.... ##:"
+echo "::: ##:::: ##:::: ##: ##:::: ##: ##::::::::. ##'##:::::::::::::::::::'##:. ##:::. ##'##::: ##:::: ##: ##::::..::"
+echo "::: ##:::: ##:::: ##: ##:::: ##: ##:::::::::. ###:::::::'#######::::'##:::. ##:::. ###:::: ########:: ########::"
+echo "::: ##:::: ##:::: ##: ##:::: ##: ##::::::::: ## ##::::::........:::: #########::: ## ##::: ##.. ##::: ##.... ##:"
+echo "::: ##:::: ##:::: ##: ##:::: ##: ##:::::::: ##:. ##::::::::::::::::: ##.... ##:: ##:. ##:: ##::. ##:: ##:::: ##:"
+echo "::: ##::::. #######::. #######:: ########: ##:::. ##:::::::::::::::: ##:::: ##: ##:::. ##: ##:::. ##:. #######::"
+echo ":::..::::::.......::::.......:::........::..:::::..:::::::::::::::::..:::::..::..:::::..::..:::::..:::.......:::"
+echo ""
+echo -e "\033[1;32mSeja bem vindo ao ToolXMenu!\033[0m"
+echo -e "\033[1;32mLinkedin:\033[0m https://www.linkedin.com/in/thalles-canela/"
+echo -e "\033[1;32mYouTube: \033[0m https://www.youtube.com/c/aXR6CyberSecurity"
+echo -e "\033[1;32mFacebook:\033[0m https://www.facebook.com/axr6PenTest"
+echo -e "\033[1;32mGithub:  \033[0m https://github.com/ThallesCanela"
+echo -e "\033[1;32mGithub:  \033[0m https://github.com/aXR6"
+echo -e "\033[1;32mTwitter: \033[0m https://twitter.com/Axr6S"
+echo -e "\033[1;32mPadim:   \033[0m https://www.padrim.com.br/aXR6CyberSecurity"
+echo -e "\033[1;31m:=> Não seja sujo! Se achou de graça, distribua de graça repassando os devidos créditos! \033[0m"
+echo -e "\033[1;31m:=> Script ToolXMenu, desenvolvido por mim (Thalles Canela - ToolX), para organização das ferramentas encontradas em: \033[0m"
+echo -e "\033[1;31m:=> https://github.com/We5ter/Scanners-Box \033[0m"
+echo ""
+toolxmenu
+##Fim Bem Vindo##
+#######################
+##/Bem Vindo##

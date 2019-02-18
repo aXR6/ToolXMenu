@@ -1,0 +1,403 @@
+#!/bin/bash
+SHELL=/bin/sh
+PATH=/sbin:/usr/sbin:/usr/bin:/bin
+DirAtual="${PWD}"
+
+# Thalles dos Santos Canela
+# Seja bem vindo ao downfulltsc!
+# Linkedin: https://www.linkedin.com/in/thalles-canela/
+# YouTube:  https://www.youtube.com/c/aXR6CyberSecurity
+# Facebook: https://www.facebook.com/axr6PenTest
+# Github:   https://github.com/ThallesCanela
+# Github:   https://github.com/aXR6
+# Twitter:  https://twitter.com/Axr6S
+# Padim:    https://www.padrim.com.br/aXR6CyberSecurity
+# Não seja sujo! Se achou de graça, distribua de graça repassando os devidos créditos!
+# Script ToolXMenu, desenvolvido por mim (Thalles Canela - ToolX), para organização das ferramentas encontradas em:https://github.com/We5ter/Scanners-Box
+
+if [ -e "$DirAtual/Scanners_de_Subdomínio_ou_Ferramentas_de_Enumeracao" ]
+then
+echo " o diretorio existe"
+else
+echo " o diretorio não existe vamos criar o diretorio"
+
+mkdir Scanners_de_Subdomínio_ou_Ferramentas_de_Enumeracao
+mkdir Scanners_de_Vulnerabilidade_de_Banco_de_Dados_ou_Ferramentas_de_Enumeracao
+mkdir Senhas_Fracas_Scanners_de_Usuarios_ou_Ferramentas_de_Enumeracao
+mkdir Ferramentas_de_Deteccao_IoT_ou_Scanners
+mkdir Scanners_XSS_refletidos_ou_baseados_em_DOM
+mkdir Gerenciamento_de_ativos_corporativos_ou_ferramentas_de_coleta_de_vazamentos
+mkdir Deteccao_de_WebShell_ou_Ferramentas_de_Analise_de_Malware
+mkdir Ferramentas_de_penetracao_de_intranet_ou_scanners
+mkdir Scanners_de_Middleware_ou_Ferramentas_de_Impressao_Digital
+mkdir Scanners_especiais__apenas_para_alguns_componentes_especiais__
+mkdir Scanners_de_rede_sem_fio
+mkdir Scanners_de_rede_local__rede_local_
+mkdir Ferramentas_de_revisao_de_codigo_ou_scanners
+mkdir Scanners_de_design_modular_ou_estrutura_de_deteccao_de_vulnerabilidades
+mkdir Algumas_ferramentas_estao_relacionadas_com_o_APT
+
+mkdir Algumas_ferramentas_de_seguranca_estao_relacionadas_com_o_ICS_e_a_rede_grande
+
+#Scanners_de_Subdomínio_ou_Ferramentas_de_Enumeracao
+git clone https://github.com/lijiejie/subdomainsbrute.git
+git clone https://github.com/ring04h/wydomain.git
+git clone https://github.com/le4f/dnsmaper.git
+git clone https://github.com/0xbug/orangescan.git
+git clone https://github.com/therook/subbrute.git
+git clone https://github.com/we5ter/gsdf.git
+git clone https://github.com/mandatoryprogrammer/cloudflare_enum.git
+git clone https://github.com/guelfoweb/knock.git
+git clone https://github.com/exp-db/pythonpool/tree/master/tools/domainseeker.git
+git clone https://github.com/code-scan/brodomain.git
+git clone https://github.com/chuhades/dnsbrute.git
+git clone https://github.com/yanxiu0614/subdomain3.git
+git clone https://github.com/michenriksen/aquatone.git
+git clone https://github.com/evilsocket/dnssearch.git
+git clone https://github.com/reconned/domained.git
+git clone https://github.com/bit4woo/teemo.git
+git clone https://github.com/laramies/theharvester.git
+git clone https://github.com/swisskyrepo/subdomino.git
+git clone https://github.com/nmalcolm/inventus.git
+git clone https://github.com/aboul3la/sublist3r.git
+git clone https://github.com/jonluca/anubis.git
+git clone https://github.com/n4xh4ck5/n4xd0rk.git
+git clone https://github.com/infosec-au/altdns.git
+git clone https://github.com/feeicn/esd.git
+git clone https://github.com/unapibageek/ctfr.git
+git clone https://github.com/giovanifss/dumb.git
+git clone https://github.com/caffix/amass.git
+git clone https://github.com/ice3man543/subfinder.git
+
+mv subdomainsbrute wydomain dnsmaper orangescan subbrute gsdf cloudflare_enum knock domainseeker brodomain dnsbrute subdomain3 aquatone dnssearch domained teemo subdomino inventus sublist3r anubis n4xd0rk altdns esd ctfr dumb amass subfinder $DirAtual/Scanners_de_Subdomínio_ou_Ferramentas_de_Enumeracao
+
+
+
+#Scanners_de_Vulnerabilidade_de_Banco_de_Dados_ou_Ferramentas_de_Enumeracao
+git clone https://github.com/0xbug/sqliscanner.git
+git clone https://github.com/stamparm/dsss.git
+git clone https://github.com/lorexxar/feigong.git
+git clone https://github.com/youngyangyang04/nosqlattack.git
+git clone https://github.com/neohapsis/bbqsql.git
+git clone https://github.com/netspi/powerupsql.git
+git clone https://github.com/whitewidowscanner/whitewidow.git
+git clone https://github.com/stampery/mongoaudit.git
+git clone https://github.com/torque59/nosql-exploitation-framework.git
+git clone https://github.com/missdronio/blindy.git
+git clone https://github.com/fengxuangit/fox-scan.git
+git clone https://github.com/netspi/powerupsql.git
+git clone https://github.com/johntroony/blisqy.git
+git clone https://github.com/ron190/jsql-injection.git
+git clone https://github.com/hadesy2k/sqliv.git
+git clone https://github.com/s0md3v/sqlmate.git
+git clone https://github.com/m8r0wn/enumdb.git
+#git clone https://github.com/9tail123/wooscan.git
+
+mv sqliscanner dsss feigong nosqlattack bbqsql powerupsql whitewidow mongoaudit nosql-exploitation-framework blindy fox-scan powerupsql blisqy jsql-injection sqliv sqlmate enumdb $DirAtual/Scanners_de_Vulnerabilidade_de_Banco_de_Dados_ou_Ferramentas_de_Enumeracao
+
+
+
+#Senhas_Fracas_Scanners_de_Usuarios_ou_Ferramentas_de_Enumeracao
+git clone https://github.com/lijiejie/htpwdscan.git
+git clone https://github.com/ysrc/f-scrack.git
+git clone https://github.com/mebus/cupp.git
+git clone https://github.com/netxfly/crack_ssh.git
+git clone https://github.com/landgrey/pydictor.git
+git clone https://github.com/shengqi158/weak_password_detect.git
+git clone https://github.com/s0md3v/blazy.git
+git clone https://github.com/moosedojo/mybff.git
+
+mv htpwdscan f-scrack cupp crack_ssh pydictor weak_password_detect blazy mybff $DirAtual/Senhas_Fracas_Scanners_de_Usuarios_ou_Ferramentas_de_Enumeracao
+
+
+
+#Ferramentas_de_Deteccao_IoT_ou_Scanners
+git clone https://github.com/rapid7/iotseeker.git
+git clone https://github.com/shodan-labs/iotdb.git
+git clone https://github.com/googleinurl/routerhunterbr.git
+git clone https://github.com/scu-igroup/telnet-scanner.git
+git clone https://github.com/viraintel/owasp-nettacker.git
+git clone https://github.com/threat9/routersploit.git
+
+mv iotseeker iotdb routerhunterbr telnet-scanner owasp-nettacker routersploit $DirAtual/Ferramentas_de_Deteccao_IoT_ou_Scanners
+
+
+
+#Scanners_XSS_refletidos_ou_baseados_em_DOM
+#git clone https://github.com/shawarkhanethicalhacker/brutexss.git
+git clone https://github.com/1n3/xsstracer.git
+git clone https://github.com/0x584a/fuzzxssphp.git
+git clone https://github.com/chuhades/xss_scan.git
+git clone https://github.com/blackhole1/autofindxssandcsrf.git
+git clone https://github.com/shogunlab/shuriken.git
+git clone https://github.com/s0md3v/xsstrike.git
+git clone https://github.com/stamparm/dsxs.git
+
+mv xsstracer fuzzxssphp xss_scan autofindxssandcsrf shuriken xsstrike dsxs $DirAtual/Scanners_XSS_refletidos_ou_baseados_em_DOM
+
+
+
+#Gerenciamento_de_ativos_corporativos_ou_ferramentas_de_coleta_de_vazamentos
+git clone https://github.com/ysrc/xunfeng.git
+git clone https://github.com/laramies/theharvester.git
+git clone https://github.com/x0day/multisearch-v2.git
+git clone https://github.com/ekultek/zeus-scanner.git
+git clone https://github.com/0xbug/biu-framework.git
+git clone https://github.com/metac0rtex/githarvester.git
+git clone https://github.com/shengqi158/svnhack.git
+git clone https://github.com/repoog/gitprey.git
+git clone https://github.com/0xbug/hawkeye.git
+#git clone https://github.com/lianfeng30/githubscan.git
+git clone https://github.com/unkl4b/gitminer.git
+git clone https://github.com/lijiejie/githack.git
+git clone https://github.com/dxa4481/trufflehog.git
+git clone https://github.com/1n3/goohak.git
+git clone https://github.com/ukhomeoffice/repo-security-scanner.git
+git clone https://github.com/feeicn/gsil.git
+git clone https://github.com/misecurity/x-patrol.git
+git clone https://github.com/1n3/blackwidow.git
+git clone https://github.com/anshumanbh/git-all-secrets.git
+git clone https://github.com/s0md3v/photon.git
+git clone https://github.com/vksrc/github-monitor.git
+
+mv xunfeng theharvester multisearch-v2 zeus-scanner biu-framework githarvester svnhack gitprey hawkeye gitminer githack trufflehog goohak repo-security-scanne gsil x-patrol blackwidow git-all-secret photon github-monitor $DirAtual/Gerenciamento_de_ativos_corporativos_ou_ferramentas_de_coleta_de_vazamentos
+
+
+
+#Deteccao_de_WebShell_ou_Ferramentas_de_Analise_de_Malware
+git clone https://github.com/he1m4n6a/findwebshell.git
+git clone https://github.com/tencent/habomalhunter.git
+git clone https://github.com/plaguescanner/plaguescanner.git
+git clone https://github.com/nbs-system/php-malware-finder.git
+git clone https://github.com/emposha/php-shell-detector.git
+git clone https://github.com/erevus-cn/scan_webshell.git
+git clone https://github.com/emposha/shell-detector.git
+git clone https://github.com/m4rco-/dorothy2.git
+git clone https://github.com/droidefense/engine.git
+
+mv findwebshell habomalhunter plaguescanner php-malware-finder php-shell-detector scan_webshell shell-detector dorothy2 engine $DirAtual/Deteccao_de_WebShell_ou_Ferramentas_de_Analise_de_Malware
+
+
+
+git clone https://github.com/lcatro/network_backdoor_scanner.git
+git clone https://github.com/fdiskyou/hunter.git
+git clone https://github.com/blackhole1/webrtcxss.git
+
+mv network_backdoor_scanner hunter webrtcxss $DirAtual/Ferramentas_de_penetracao_de_intranet_ou_scanners
+
+
+
+#Scanners_de_Middleware_ou_Ferramentas_de_Impressao_Digital
+git clone https://github.com/ring04h/wyportmap.git
+git clone https://github.com/ring04h/weakfilescan.git
+git clone https://github.com/enablesecurity/wafw00f.git
+git clone https://github.com/rbsec/sslscan.git
+git clone https://github.com/urbanadventurer/whatweb.git
+git clone https://github.com/tanjiti/fingerprint.git
+git clone https://github.com/nanshihui/scan-t.git
+git clone https://github.com/offensivepython/nscan.git
+git clone https://github.com/ywolf/f-nascan.git
+git clone https://github.com/y1ng1996/f-middlewarescan.git
+git clone https://github.com/maurosoria/dirsearch.git
+git clone https://github.com/x0day/bannerscan.git
+git clone https://github.com/rassec/rasscan.git
+git clone https://github.com/3xp10it/bypass_waf.git
+git clone https://github.com/3xp10it/xcdn.git
+git clone https://github.com/xyntax/bingc.git
+git clone https://github.com/xyntax/dirbrute.git
+git clone https://github.com/zer0h/httpscan.git
+git clone https://github.com/lietdai/doom.git
+git clone https://github.com/chichou/grab.js.git
+git clone https://github.com/nitr4x/whichcdn.git
+git clone https://github.com/secfree/bcrpscan.git
+git clone https://github.com/mozilla/ssh_scan.git
+git clone https://github.com/18f/domain-scan.git
+git clone https://github.com/ggusoft/inforfinder.git
+git clone https://github.com/boy-hack/gwhatweb.git
+git clone https://github.com/mosuan/filescan.git
+git clone https://github.com/xyntax/filesensor.git
+git clone https://github.com/deibit/cansina.git
+#git clone https://github.com/0xbug/howl.git
+git clone https://github.com/mozilla/cipherscan.git
+git clone https://github.com/xmendez/wfuzz.git
+git clone https://github.com/s0md3v/breacher.git
+git clone https://github.com/ztgrace/changeme.git
+git clone https://github.com/medbenali/cyberscan.git
+git clone https://github.com/m0nad/hellraiser.git
+git clone https://github.com/scipag/vulscan.git
+git clone https://github.com/jekyc/wig.git
+git clone https://github.com/eldraco/domain_analyzer.git
+git clone https://github.com/cloudtracer/paskto.git
+git clone https://github.com/zerokeeper/webeye.git
+git clone https://github.com/m3liot/shcheck.git
+git clone https://github.com/aipengjie/sensitivefilescan.git
+git clone https://github.com/fnk0c/cangibrina.git
+git clone https://github.com/n4xh4ck5/cmssc4n.git
+git clone https://github.com/ekultek/whatwaf.git
+git clone https://github.com/dzonerzy/gowapt.git
+git clone https://github.com/blackye/webdirdig.git
+git clone https://github.com/githacktools/billcipher.git
+git clone https://github.com/boy-hack/w8fuckcdn.git
+git clone https://github.com/boy-hack/w11scan.git
+git clone https://github.com/nekmo/dirhunt.git
+git clone https://github.com/metachar/pyhawk.git
+
+mv wyportmap weakfilescan wafw00f sslscan whatweb fingerprint scan-t nscan f-nasca f-middlewarescan dirsearch bannerscan rasscan bypass_waf xcdn bingc dirbrute httpscan doom grab whichcdn bcrpscan ssh_scan domain-scan inforfinder gwhatweb filescan filesensor cansina cipherscan wfuzz breacher changeme cyberscan hellraiser vulscan wig domain_analyzer paskto webeye shcheck sensitivefilescan cangibrina cmssc4n whatwaf gowapt webdirdig billcipher w8fuckcdn w11scan dirhunt pyhawk $DirAtual/Scanners_de_Middleware_ou_Ferramentas_de_Impressao_Digital
+
+
+
+#Scanners_especiais__apenas_para_alguns_componentes_especiais__
+git clone https://github.com/blackye/jenkins.git
+git clone https://github.com/code-scan/dzscan.git
+git clone https://github.com/chuhades/cms-exploit-framework.git
+git clone https://github.com/lijiejie/iis_shortname_scanner.git
+git clone https://github.com/riusksk/flashscanner.git
+#git clone https://github.com/coffeehb/sstif.git
+git clone https://github.com/epinna/tplmap.git
+git clone https://github.com/cr0hn/dockerscan.git
+git clone https://github.com/m4ll0k/wpseku.git
+git clone https://github.com/rastating/wordpress-exploit-framework.git
+git clone https://github.com/ilmila/j2eescan.git
+git clone https://github.com/riusksk/strutscan.git
+git clone https://github.com/d35m0nd142/lfisuite.git
+git clone https://github.com/0x4d31/salt-scanner.git
+git clone https://github.com/tijme/angularjs-csti-scanner.git
+git clone https://github.com/irsdl/iis-shortname-scanner.git
+git clone https://github.com/swisskyrepo/wordpresscan.git
+git clone https://github.com/chybeta/cmspoc.git
+git clone https://github.com/rudsarkar/crlf-injector.git
+git clone https://github.com/3gstudent/smbtouch-scanner.git
+git clone https://github.com/utiso/dorkbot.git
+git clone https://github.com/osandamalith/lfifreak.git
+git clone https://github.com/mak-/parameth.git
+git clone https://github.com/lucifer1993/struts-scan.git
+git clone https://github.com/hahwul/a2sv.git
+git clone https://github.com/nullarray/dorknet.git
+git clone https://github.com/nickstadb/barmie.git
+git clone https://github.com/retirejs/grunt-retire.git
+git clone https://github.com/kotobukki/bda.git
+git clone https://github.com/jagracey/regex-dos.git
+git clone https://github.com/milesrichardson/docker-onion-nmap.git
+git clone https://github.com/moham3driahi/xattacker.git
+git clone https://github.com/lijiejie/bbscan.git
+git clone https://github.com/almandin/fuxploider.git
+git clone https://github.com/ice3man543/subover.git
+git clone https://github.com/jamalc0m/wphunter.git
+git clone https://github.com/retirejs/retire.js.git
+git clone https://github.com/3xp10it/xupload.git
+git clone https://github.com/mobrine-mob/m0b-tool.git
+git clone https://github.com/rezasp/vbscan.git
+git clone https://github.com/mrsqar-ye/badmod.git
+git clone https://github.com/tuhinshubhra/cmseek.git
+git clone https://github.com/cloudsploit/scans.git
+git clone https://github.com/radenvodka/svscanner.git
+git clone https://github.com/rezasp/joomscan.git
+git clone https://github.com/6ix7ine/djangohunter.git
+
+mv jenkins dzscan cms-exploit-framework iis_shortname_scanner flashscanner tplmap dockerscan wpseku wordpress-exploit-framework j2eescan strutscan lfisuite salt-scanner angularjs-csti-scanner iis-shortname-scanner wordpresscan cmspoc crlf-injector smbtouch-scanner dorkbot lfifreak parameth struts-scan a2sv dorknet barmie grunt-retire bda regex-dos docker-onion-nmap xattacker bbscan fuxploider subover wphunter retire xupload m0b-tool vbscan badmod cmseek scans svscanner joomscan djangohunter $DirAtual/Scanners_especiais__apenas_para_alguns_componentes_especiais__
+
+
+
+#Scanners_de_rede_sem_fio
+git clone https://github.com/savio-code/fern-wifi-cracker.git
+git clone https://github.com/m4n3dw0lf/pythem.git
+git clone https://github.com/p0cl4bs/wifi-pumpkin.git
+git clone https://github.com/misterbianco/boopsuite.git
+git clone https://github.com/danmcinerney/lans.py.git
+git clone https://github.com/besimaltnok/pifinger.git
+git clone https://github.com/derv82/wifite2.git
+
+mv fern-wifi-cracker pythem wifi-pumpkin boopsuite lans pifinger wifite2 $DirAtual/Scanners_de_rede_sem_fio
+
+
+
+#Scanners_de_rede_local__rede_local_
+git clone https://github.com/sowish/lnscan.git
+git clone https://github.com/niloofarkheirkhah/nili.git
+git clone https://github.com/skylined/localnetworkscanner.git
+
+mv lnscan nili localnetworkscanner $DirAtual/Scanners_de_rede_local__rede_local_
+
+
+
+#Ferramentas_de_revisao_de_codigo_ou_scanners
+git clone https://github.com/wufeifei/cobra.git
+git clone https://github.com/onesourcecat/phpvulhunter.git
+git clone https://github.com/qihoo360/phptrace.git
+git clone https://github.com/ajinabraham/nodejsscan.git
+git clone https://github.com/shengqi158/pyvulhunter.git
+git clone https://github.com/presidentbeef/brakeman.git
+git clone https://github.com/python-security/pyt.git
+#git clone https://github.com/m4ll0k/wpsploit.git
+git clone https://github.com/emanuil/php-reaper.git
+git clone https://github.com/lowjoel/phortress.git
+
+mv cobra phpvulhunter phptrace nodejsscan pyvulhunter brakeman pyt php-reaper phortress $DirAtual/Ferramentas_de_revisao_de_codigo_ou_scanners
+
+
+
+#Scanners_de_design_modular_ou_estrutura_de_deteccao_de_vulnerabilidades
+git clone https://github.com/infobyte/faraday.git
+git clone https://github.com/az0ne/azscanner.git
+git clone https://github.com/blackye/lalascan.git
+git clone https://github.com/blackye/bkscanner.git
+git clone https://github.com/ysrc/gourdscanv2.git
+git clone https://github.com/netxfly/passive_scan.git
+git clone https://github.com/1n3/sn1per.git
+git clone https://github.com/rassec/pentester_fully-automatic-scanner.git
+#git clone https://github.com/3xp10it/3xp10it.git
+#git clone https://github.com/lcys/lcyscan.git
+git clone https://github.com/xyntax/poc-t.git
+git clone https://github.com/v3n0m-scanner/v3n0m-scanner.git
+git clone https://github.com/skycrab/leakscan.git
+git clone https://github.com/zhangzhenfeng/anyscan.git
+git clone https://github.com/tuhinshubhra/red_hawk.git
+git clone https://github.com/arachni/arachni.git
+git clone https://github.com/juansacco/exploitpack.git
+git clone https://github.com/swisskyrepo/damnwebscanner.git
+git clone https://github.com/anilbaranyelken/tulpar.git
+git clone https://github.com/m4ll0k/spaghetti.git
+git clone https://github.com/yukinoshita47/yuki-chan-the-auto-pentest.git
+git clone https://github.com/0xsauby/yasuo.git
+git clone https://github.com/hatriot/clusterd.git
+git clone https://github.com/erevus-cn/pocscan.git
+git clone https://github.com/tophanttechnology/osprey.git
+git clone https://github.com/yangbh/hammer.git
+git clone https://github.com/lucifer1993/angelsword.git
+#git clone https://github.com/secrary/ellascanner.git
+git clone https://github.com/zaproxy/zaproxy.git
+git clone https://github.com/sullo/nikto.git
+git clone https://github.com/s0md3v/striker.git
+git clone https://github.com/dermotblair/webvulscan.git
+git clone https://github.com/alienwithin/owasp-mth3l3m3nt-framework.git
+git clone https://github.com/toyakula/luna.git
+git clone https://github.com/manisso/fsociety.git
+git clone https://github.com/boy-hack/w9scan.git
+git clone https://github.com/yalcinyolalan/wssat.git
+git clone https://github.com/amyangxyz/assassingo.git
+git clone https://github.com/jeffzh3ng/insectsawake.git
+git clone https://github.com/m4ll0k/galileo.git
+git clone https://github.com/joker25000/optiva-framework.git
+git clone https://github.com/theinfecteddrake/tidos-framework.git
+
+mv faraday azscanner lalascan bkscanner gourdscanv2 passive_scan sn1per pentester_fully-automatic-scanner poc-t v3n0m-scanner leakscan anyscan red_hawk arachni exploitpack damnwebscanner tulpar spaghetti yuki-chan-the-auto-pentest yasuo clusterd pocscan osprey hammer angelsword zaproxy nikto striker webvulscan owasp-mth3l3m3nt-framework luna fsociety w9scan wssat assassingo insectsawake galileo optiva-framewor tidos-framework $DirAtual/Scanners_de_design_modular_ou_estrutura_de_deteccao_de_vulnerabilidades
+
+
+
+#Algumas_ferramentas_estao_relacionadas_com_o_APT
+git clone https://github.com/neo23x0/loki.git
+
+mv loki $DirAtual/Algumas_ferramentas_estao_relacionadas_com_o_APT
+
+
+
+#Algumas_ferramentas_de_seguranca_estao_relacionadas_com_o_ICS_e_a_rede_grande
+git clone https://github.com/w3h/icsmaster/tree/master/nse.git
+git clone https://github.com/opennetworkingfoundation/delta.git
+
+mv nse delta $DirAtual/Algumas_ferramentas_de_seguranca_estao_relacionadas_com_o_ICS_e_a_rede_grande
+
+
+
+fi
+exit
