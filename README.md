@@ -37,3 +37,8 @@ Não é necessário baixar todas as ferramentas de uma vez com o "downfulltsc". 
 ```
 git clone https://github.com/aXR6/ToolXMenu.git
 ```
+# Mais explicações no YouTube:
+
+
+[![#InstallFEST[aXR6] - Script ToolXMenu - Organizador de repositórios](https://i.imgur.com/BFoiz07.png)](https://www.youtube.com/watch?v=GpVJcA0tGek&t=16s)
+
