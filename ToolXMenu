@@ -1247,12 +1247,12 @@ echo $MU"https://github.com/BlackHole1/WebRtcXSS#webrtcxss"
 echo $link"BlackHole1/WebRtcXSS"
 }
 
-##FPIS##
+##SMFID##
 ###################
-##START FPIS##
-FPIS()
+##START SMFID##
+SMFID()
 {
-    FPIS=("Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" 
+    SMFID=("Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" 
       "Ferramenta de detecção de vazamento de informações confidenciais multi-thread dinâmica (weakfilescan)" 
       "Identifique e faça impressões digitais do Firewall de Aplicativos da Web (wafw00f)" 
       "Testa serviços ativados para SSL / TLS para descobrir conjuntos de cifras suportados (sslscan)" 
@@ -1304,119 +1304,119 @@ FPIS()
       "Plataforma de identificação de impressão digital distribuída WEB (w11scan)" 
       "Encontre diretórios da web sem força bruta (dirhunt)" 
       "Procura no diretório de escolha por arquivos interessantes. Como arquivos de banco de dados e arquivos com senhas armazenados neles (pyhawk)" "Voltar")
-  select fpisopt in "${FPIS[@]}"; do
-  if [ "$fpisopt" = "Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" ]; then
+  select smfidopt in "${SMFID[@]}"; do
+  if [ "$smfidopt" = "Varredura da porta de destino + reconhecimento de impressão digital do serviço do sistema (wyportmap)" ]; then
     wyportmap
-    elif [ "$fpisopt" = "Ferramenta de detecção de vazamento de informações confidenciais multi-thread dinâmica (weakfilescan)" ]; then
+    elif [ "$smfidopt" = "Ferramenta de detecção de vazamento de informações confidenciais multi-thread dinâmica (weakfilescan)" ]; then
         weakfilescan
-    elif [ "$fpisopt" = "Identifique e faça impressões digitais do Firewall de Aplicativos da Web (wafw00f)" ]; then
+    elif [ "$smfidopt" = "Identifique e faça impressões digitais do Firewall de Aplicativos da Web (wafw00f)" ]; then
         wafw00f
-    elif [ "$fpisopt" = "Testa serviços ativados para SSL / TLS para descobrir conjuntos de cifras suportados (sslscan)" ]; then
+    elif [ "$smfidopt" = "Testa serviços ativados para SSL / TLS para descobrir conjuntos de cifras suportados (sslscan)" ]; then
         sslscan
-    elif [ "$fpisopt" = "Website Fingerprinter (whatweb)" ]; then
+    elif [ "$smfidopt" = "Website Fingerprinter (whatweb)" ]; then
         whatweb
-    elif [ "$fpisopt" = "Outro site Fingerprinter (fingerprint)" ]; then
+    elif [ "$smfidopt" = "Outro site Fingerprinter (fingerprint)" ]; then
         fingerprint
-    elif [ "$fpisopt" = "Uma nova aranha baseada em python com mais funções, incluindo pesquisa de impressão digital da rede (scan-t)" ]; then
+    elif [ "$smfidopt" = "Uma nova aranha baseada em python com mais funções, incluindo pesquisa de impressão digital da rede (scan-t)" ]; then
         scan-t
-    elif [ "$fpisopt" = "Scanner de acesso rápido à Internet (nscan)" ]; then
+    elif [ "$smfidopt" = "Scanner de acesso rápido à Internet (nscan)" ]; then
         nscan
-    elif [ "$fpisopt" = "Verificando um script de informações de ativos de rede (f-nascan)" ]; then
+    elif [ "$smfidopt" = "Verificando um script de informações de ativos de rede (f-nascan)" ]; then
         f-nascan
-    elif [ "$fpisopt" = "Scripts de detecção de vulnerabilidades para serviços de middleware (f-middlewarescan)" ]; then
+    elif [ "$smfidopt" = "Scripts de detecção de vulnerabilidades para serviços de middleware (f-middlewarescan)" ]; then
         f-middlewarescan
-    elif [ "$fpisopt" = "Scanner de caminho da Web (dirsearch)" ]; then
+    elif [ "$smfidopt" = "Scanner de caminho da Web (dirsearch)" ]; then
         dirsearch
-    elif [ "$fpisopt" = "Banner de segmento C com scanner de caminho (bannerscan)" ]; then
+    elif [ "$smfidopt" = "Banner de segmento C com scanner de caminho (bannerscan)" ]; then
         bannerscan
-    elif [ "$fpisopt" = "Scanners internos de velocidade de porta de rede (rasscan)" ]; then
+    elif [ "$smfidopt" = "Scanners internos de velocidade de porta de rede (rasscan)" ]; then
         rasscan
-    elif [ "$fpisopt" = "Ferramenta Automática de Fusão do WAF Bypass (bypass_waf)" ]; then
+    elif [ "$smfidopt" = "Ferramenta Automática de Fusão do WAF Bypass (bypass_waf)" ]; then
         bypass_waf
-    elif [ "$fpisopt" = "Tente descobrir o ip real por trás do cdn (xcdn)" ]; then
+    elif [ "$smfidopt" = "Tente descobrir o ip real por trás do cdn (xcdn)" ]; then
         xcdn
-    elif [ "$fpisopt" = "Com base na consulta do mecanismo de pesquisa C / consulta de parada lateral, multi-threaded, suportada (bingc)" ]; then
+    elif [ "$smfidopt" = "Com base na consulta do mecanismo de pesquisa C / consulta de parada lateral, multi-threaded, suportada (bingc)" ]; then
         bingc
-    elif [ "$fpisopt" = "Ferramenta de enumeração de diretório WEB multi-thread (dirbrute)" ]; then
+    elif [ "$smfidopt" = "Ferramenta de enumeração de diretório WEB multi-thread (dirbrute)" ]; then
         dirbrute
-    elif [ "$fpisopt" = "Um detector de serviço HTTP com um rastreador de IP / CIDR (httpscan)" ]; then
+    elif [ "$smfidopt" = "Um detector de serviço HTTP com um rastreador de IP / CIDR (httpscan)" ]; then
         httpscan
-    elif [ "$fpisopt" = "Distribuição de tarefas distribuídas do scanner de vulnerabilidades de porta ip baseado em espinhos (doom)" ]; then
+    elif [ "$smfidopt" = "Distribuição de tarefas distribuídas do scanner de vulnerabilidades de porta ip baseado em espinhos (doom)" ]; then
         doom
-    elif [ "$fpisopt" = "Fast TCP banner pega como zgrab, mas suporta muito mais protocolo (grab.js)" ]; then
+    elif [ "$smfidopt" = "Fast TCP banner pega como zgrab, mas suporta muito mais protocolo (grab.js)" ]; then
         grab.js
-    elif [ "$fpisopt" = "Detectar se um determinado site está protegido por uma Content Delivery Network (whichcdn)" ]; then
+    elif [ "$smfidopt" = "Detectar se um determinado site está protegido por uma Content Delivery Network (whichcdn)" ]; then
         whichcdn
-    elif [ "$fpisopt" = "Base no rastreador do caminho da web do resultado do rastreador (bcrpscan)" ]; then
+    elif [ "$smfidopt" = "Base no rastreador do caminho da web do resultado do rastreador (bcrpscan)" ]; then
         bcrpscan
-    elif [ "$fpisopt" = "Uma configuração protótipo de SSH e scanner de política (ssh_scan)" ]; then
+    elif [ "$smfidopt" = "Uma configuração protótipo de SSH e scanner de política (ssh_scan)" ]; then
         ssh_scan
-    elif [ "$fpisopt" = "Verifica domínios para dados em sua configuração HTTPS e variados outros itens (domain-scan)" ]; then
+    elif [ "$smfidopt" = "Verifica domínios para dados em sua configuração HTTPS e variados outros itens (domain-scan)" ]; then
         domain-scan
-    elif [ "$fpisopt" = "Uma ferramenta criada para coletar informações de qualquer domínio apontando para um servidor e fingerprinter (inforfinder)" ]; then
+    elif [ "$smfidopt" = "Uma ferramenta criada para coletar informações de qualquer domínio apontando para um servidor e fingerprinter (inforfinder)" ]; then
         inforfinder
-    elif [ "$fpisopt" = "Fingerprinter for CMS (gwhatweb)" ]; then
+    elif [ "$smfidopt" = "Fingerprinter for CMS (gwhatweb)" ]; then
         gwhatweb
-    elif [ "$fpisopt" = "Scanner de arquivos sensíveis (filescan)" ]; then
+    elif [ "$smfidopt" = "Scanner de arquivos sensíveis (filescan)" ]; then
         filescan
-    elif [ "$fpisopt" = "Ferramenta de detecção de arquivos dinâmicos baseada no rastreador (filesensor)" ]; then
+    elif [ "$smfidopt" = "Ferramenta de detecção de arquivos dinâmicos baseada no rastreador (filesensor)" ]; then
         filesensor
-    elif [ "$fpisopt" = "Ferramenta de Descoberta de Conteúdo da Web (cansina)" ]; then
+    elif [ "$smfidopt" = "Ferramenta de Descoberta de Conteúdo da Web (cansina)" ]; then
         cansina
-    elif [ "$fpisopt" = "Uma maneira muito simples de descobrir quais ciphersuites SSL são suportados por um destino (cipherscan)" ]; then
+    elif [ "$smfidopt" = "Uma maneira muito simples de descobrir quais ciphersuites SSL são suportados por um destino (cipherscan)" ]; then
         cipherscan
-    elif [ "$fpisopt" = "Fuzzer de aplicativo da Web/estrutura e scanner de conteúdo da web (wfuzz)" ]; then
+    elif [ "$smfidopt" = "Fuzzer de aplicativo da Web/estrutura e scanner de conteúdo da web (wfuzz)" ]; then
         wfuzz
-    elif [ "$fpisopt" = "Um localizador de painel de administração multithreaded avançado escrito em python (breacher)" ]; then
+    elif [ "$smfidopt" = "Um localizador de painel de administração multithreaded avançado escrito em python (breacher)" ]; then
         breacher
-    elif [ "$fpisopt" = "Um scanner de credenciais padrão (changeme)" ]; then
+    elif [ "$smfidopt" = "Um scanner de credenciais padrão (changeme)" ]; then
         changeme
-    elif [ "$fpisopt" = "Uma ferramenta de teste de penetração de código aberto que pode analisar pacotes, decodificação, portas de varredura, ping e geolocalização de um IP (cyberscan)" ]; then
+    elif [ "$smfidopt" = "Uma ferramenta de teste de penetração de código aberto que pode analisar pacotes, decodificação, portas de varredura, ping e geolocalização de um IP (cyberscan)" ]; then
         cyberscan
-    elif [ "$fpisopt" = "HellRaiser faz a varredura com nmap e depois correlaciona cpe's encontrados com cve-search para enumerar vulnerabilidades (hellraiser)" ]; then
+    elif [ "$smfidopt" = "HellRaiser faz a varredura com nmap e depois correlaciona cpe's encontrados com cve-search para enumerar vulnerabilidades (hellraiser)" ]; then
         hellraiser
-    elif [ "$fpisopt" = "Verificação avançada de vulnerabilidades com o Nmap NSE (vulscan)" ]; then
+    elif [ "$smfidopt" = "Verificação avançada de vulnerabilidades com o Nmap NSE (vulscan)" ]; then
         vulscan
-    elif [ "$fpisopt" = "WebApp Information Gatherer (wig)" ]; then
+    elif [ "$smfidopt" = "WebApp Information Gatherer (wig)" ]; then
         wig
-    elif [ "$fpisopt" = "Analise a segurança de qualquer domínio encontrando todas as informações possíveis (domain_analyzer)" ]; then
+    elif [ "$smfidopt" = "Analise a segurança de qualquer domínio encontrando todas as informações possíveis (domain_analyzer)" ]; then
         domain_analyzer
-    elif [ "$fpisopt" = "Verificador de diretório passivo e rastreador da Web com base no Nikto DB (paskto)" ]; then
+    elif [ "$smfidopt" = "Verificador de diretório passivo e rastreador da Web com base no Nikto DB (paskto)" ]; then
         paskto
-    elif [ "$fpisopt" = "Um serviço da Web e fingerprinter WAF (webeye)" ]; then
+    elif [ "$smfidopt" = "Um serviço da Web e fingerprinter WAF (webeye)" ]; then
         webeye
-    elif [ "$fpisopt" = "Basta verificar os cabeçalhos de segurança em um site de destino (shcheck)" ]; then
+    elif [ "$smfidopt" = "Basta verificar os cabeçalhos de segurança em um site de destino (shcheck)" ]; then
         shcheck
-    elif [ "$fpisopt" = "Um scanner de velocidade e sensível de arquivos sensíveis (sensitivefilescan)" ]; then
+    elif [ "$smfidopt" = "Um scanner de velocidade e sensível de arquivos sensíveis (sensitivefilescan)" ]; then
         sensitivefilescan
-    elif [ "$fpisopt" = "Um localizador rápido e poderoso do painel de controle (admin) (cangibrina)" ]; then
+    elif [ "$smfidopt" = "Um localizador rápido e poderoso do painel de controle (admin) (cangibrina)" ]; then
         cangibrina
-    elif [ "$fpisopt" = "Ferramenta para identificar se um domínio é um CMS como Wordpress, Moodle, Joomla (cmssc4n)" ]; then
+    elif [ "$smfidopt" = "Ferramenta para identificar se um domínio é um CMS como Wordpress, Moodle, Joomla (cmssc4n)" ]; then
         cmssc4n
-    elif [ "$fpisopt" = "Detectar e ignorar firewalls e sistemas de proteção de aplicativos da web (whatwaf)" ]; then
+    elif [ "$smfidopt" = "Detectar e ignorar firewalls e sistemas de proteção de aplicativos da web (whatwaf)" ]; then
         whatwaf
-    elif [ "$fpisopt" = "Teste de penetração de aplicativos da Web e ferramenta fuzz de aplicativos da Web (gowapt)" ]; then
+    elif [ "$smfidopt" = "Teste de penetração de aplicativos da Web e ferramenta fuzz de aplicativos da Web (gowapt)" ]; then
         gowapt
-    elif [ "$fpisopt" = "Scanner de arquivos sensíveis (webdirdig)" ]; then
+    elif [ "$smfidopt" = "Scanner de arquivos sensíveis (webdirdig)" ]; then
         webdirdig
-    elif [ "$fpisopt" = "Ferramenta de coleta de informações para um site ou endereço IP (billcipher)" ]; then
+    elif [ "$smfidopt" = "Ferramenta de coleta de informações para um site ou endereço IP (billcipher)" ]; then
         billcipher
-    elif [ "$fpisopt" = "Obtenha o endereço IP real do site digitalizando toda a rede (w8fuckcdn)" ]; then
+    elif [ "$smfidopt" = "Obtenha o endereço IP real do site digitalizando toda a rede (w8fuckcdn)" ]; then
         w8fuckcdn
-    elif [ "$fpisopt" = "Plataforma de identificação de impressão digital distribuída WEB (w11scan)" ]; then
+    elif [ "$smfidopt" = "Plataforma de identificação de impressão digital distribuída WEB (w11scan)" ]; then
         w11scan
-    elif [ "$fpisopt" = "Encontre diretórios da web sem força bruta (dirhunt)" ]; then
+    elif [ "$smfidopt" = "Encontre diretórios da web sem força bruta (dirhunt)" ]; then
         dirhunt
-    elif [ "$fpisopt" = "Procura no diretório de escolha por arquivos interessantes. Como arquivos de banco de dados e arquivos com senhas armazenados neles (pyhawk)" ]; then
+    elif [ "$smfidopt" = "Procura no diretório de escolha por arquivos interessantes. Como arquivos de banco de dados e arquivos com senhas armazenados neles (pyhawk)" ]; then
         pyhawk
-  elif [ "$fpisopt" = "Voltar" ]; then
+  elif [ "$smfidopt" = "Voltar" ]; then
         toolxmenu
   else
       echo "Que diacho foi isso que tu digitou? Existe não!!"
   fi
   done
 }
-##END FPIS##
+##END SMFID##
 #################
 
 wyportmap()
