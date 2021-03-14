@@ -2,7 +2,7 @@
 PS3="ToolXMenu>"
 link="Acesse: https://github.com/"
 MU="Modo de Usar: "
-DirAtual="${PWD}"
+DirAtual="${pwd}"
 Install="\033[1;34m Instalação: \033[0m"
 dir1="cd "$DirAtual"/Scanners_de_Subdominio_ou_Ferramentas_de_Enumeracao/"
 dir2="cd "$DirAtual"/Scanners_de_Vulnerabilidade_de_Banco_de_Dados_ou_Ferramentas_de_Enumeracao/"
